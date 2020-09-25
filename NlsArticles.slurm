@@ -37,6 +37,36 @@ NUMCORES=$( expr 32 '*' "$NUMWORKERS")
 echo "Number of cores for this query is" $NUMCORES
 cd $HOME/defoe
 
+
+#### Slave Trade at EB:
+
+#Investigasting the slave trade and how it permeates the different volumes of the encyclopaedia Brittanica.  We’ve got a list of keywords (slavery.txt), that we would like looked up. So we want to look those terms at:
+# - page level: returning the snippet (20 words before and after each term) every time a term is found in a page 
+# - article level: returning the whole article returned every time a term is foun in an article
+
+#It would be good to do this on a volume by volume basis (so we can look at how this changes over time). 
+
+
+## Experiment 1: At Page level
+
+# Using a window_keysearch_concordance_by_date.py, which for each time a keyword/keysentence from slavery.txt is found in A PAGE, it returns  some metadata (archive filename, page filename, edition, title) + term (keyword/keysentence) + snippet (20 words before and after the term).  And it groups the results by year.
+
+# Running this query by editions, so we have one file of results per edition.
+
+nlsfiles=(nls_first_edition.txt  nls_second_edition.txt nls_3rd_edition.txt nls_4th_edition.txt nls_5th_edition.txt nls_6th_edition.txt nls_7th_edition.txt nls_8th_edition.txt nls_4_5_6_suplement.txt)
+
+for ne in ${nlsfiles[@]}; do
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py $ne nls defoe.nls.queries.window_keysearch_concordance_by_date queries/slavery.yml -r trade_legacy_slavery_$ne -n $NUMCORES > log_$ne
+
+done
+
+
+## 2: At Article level:
+
+## For searching at article level, we need first to automatically detect the articles from EB pages and store them (preprocessed) into HDFS files. Later, we can run queries to search in those articles. 
+
+
 #### Detecting automatically the EB articles; preprocessing them ; and storing them as HDFS files.
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_first_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_first_edition -n $NUMCORES > log_first_edition.txt 
