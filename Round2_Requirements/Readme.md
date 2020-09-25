@@ -57,21 +57,21 @@ Those treatments allow us to include in our query variations of the specified te
 We have two options:
 
 - By lexicon words:
-	- <WORD>:
-		- [<YEAR>, <NUM_WORDS>]
+	- WORD:
+		- [YEAR, NUM_WORDS]
 		- ...
-	- <WORD>:
-		- [<YEAR>, <NUM_WORDS>]
+	- WORD:
+		- [YEAR, NUM_WORDS]
 		- ...
 
 Example of grouping results by [lexicon words](https://github.com/defoe-code/defoe_visualization/tree/master/Diseases/results/tuberculosis.yml)
 
 - By time: 
-	- <YEAR>:
-		- [<WORD>, <NUM_WORDS>]
+	- YEAR:
+		- [WORD, NUM_WORD]
 		- ...
-	- <YEAR>:
-		- [<WORD>, <NUM_WORDS>]
+	- YEAR:
+		- [WORD, NUM_WORDS]
 		- ...
 
 Example grouping results by [time](https://github.com/defoe-code/defoe_visualization/tree/master/Female_Emigration/TDA/results_TDA/results_tda_society_1850_1914)
@@ -79,12 +79,12 @@ Example grouping results by [time](https://github.com/defoe-code/defoe_visualiza
 ## Example of Frequency query
 
 We have used the frequency query, to calculate the frequency over time of the following Scotties Philosophers using the Encyclopaedia Britannica as our corpus: Francis Hutcheson, David Hume, Adam Smith, Dugald Stewart and Thomas Reid. 
-	- Target Word(s): None
-	- Lexicon:  [here](https://github.com/defoe-code/defoe/tree/master/queries/sc_philosophers.txt)
-	- Period of Time: Not specified. All the Encyclopaedia Britannica. 
-	- Hint count:  Term count. 
-	- Treatment: [normalize](https://github.com/defoe-code/defoe/tree/master/queries/sc_philosophers.yml ) 
-	- Grouping results: By Time
+- Target Word(s): None
+- Lexicon:  [here](https://github.com/defoe-code/defoe/tree/master/queries/sc_philosophers.txt)
+- Period of Time: Not specified. All the Encyclopaedia Britannica. 
+- Hint count:  Term count. 
+- Treatment: [normalize](https://github.com/defoe-code/defoe/tree/master/queries/sc_philosophers.yml ) 
+- Grouping results: By Time
 
 Results can be checked [here](https://github.com/defoe-code/defoe_visualization/tree/master/NLS/results_NLS/results_ks_philosophers_norm)
 
