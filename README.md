@@ -158,6 +158,9 @@ find $HOME/TDA_GDA_1785-2009/ -name "*.xml" | sort > tda_1900_1999.txt
 # Round 1 and Round 2 Results
 
 Results of these (Round 1 and Round 2) are updated [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx)
+Furthermore, we have created several notebooks for visualizing the frequency results:
+	- [Frequency visualizations for Round 1](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1)
+	- [Frequency visualizations for Round 2](https://github.com/defoe-code/defoe_visualization/tree/master/Round_2)
 
 # Trade Legacy Slavery
 
