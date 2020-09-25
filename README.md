@@ -87,19 +87,19 @@ You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Te
 
 # 5. Submitting defoe queries for Round 1 and Round 2.
 
-During this summer, we conducted a serie of studies within the [CDCS text-mining lab](https://www.cdcs.ed.ac.uk/cdcs-text-mining-lab-call-projects?utm_campaign=2619665_CDCS%20Digest%20W%2FC%2016%20March%202020&utm_medium=email&utm_source=College%20of%20Arts%2C%20Humanities%20%26%20Social%20Sciences%2C%20The%20University%20of%20Edinburgh&dm_t=0,0,0,0,0), in which we worked with humanities and social science researchers who can ask complex questions of large-scale data sets. We selected four research projects for Round 1, and two for Round 2. 
+During this summer, we conducted a serie of studies within the [CDCS text-mining lab](https://www.cdcs.ed.ac.uk/cdcs-text-mining-lab-call-projects?utm_campaign=2619665_CDCS%20Digest%20W%2FC%2016%20March%202020&utm_medium=email&utm_source=College%20of%20Arts%2C%20Humanities%20%26%20Social%20Sciences%2C%20The%20University%20of%20Edinburgh&dm_t=0,0,0,0,0), in which we worked with humanities and social science researchers who can ask complex questions of large-scale data sets. We selected four research projects for [Round 1](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements), and two for [Round 2](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements). 
 
 Round 1:
-   - Jannel Kwork: DMS study - TDA newspapers
-   - Dave O'Brien: Music study - TDA newspapers
-   - Edward Martin: Science study - TDA newspapers
-   - Galina Andreeva: Pandemics study - TDA newspapers
+   - [Jannel Kwork](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Janell): DMS study - TDA newspapers
+   - [Dave O'Brien](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Dave): Music study - TDA newspapers
+   - [Edward Martin](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Edward): Science study - TDA newspapers
+   - [Galina Andreeva](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Galina): Pandemics study - TDA newspapers
    
  Round 2:
-   - Christine Bell and Sanja Badanjak: Peace/War study - TDA newspapers
-   - Sarah Van eydhoven and Lisa Gotthard: Scots vs English - NLS chapbooks
+   - [Christine Bell and Sanja Badanjak](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Christine_Sanja): Peace/War study - TDA newspapers
+   - [Sarah Van eydhoven and Lisa Gotthard](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Sarah_Lisa): Scots vs English - NLS chapbooks
    
-Each reserch project/study had a serie of defoe queries. In most of them, we first submitted a frequency query modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another query for getting the details (text) of the desired/filtered articles. 
+Each reserch project/study had a serie of defoe queries. In most of them, we first submitted a frequency query modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another query for getting the details (text) of the desired/filtered articles. The requirements were collected using this [document](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Readme.md)
 
 So, we have created two slurm jobs, one per Round: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/cirrus_scripts/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/cirrus_scripts/Round2.slurm). You can comment the studies that do not want to run.
 
@@ -108,7 +108,7 @@ So, we have created two slurm jobs, one per Round: [Round1.slurm](https://github
    ```
 Note, that for running Round_[1|2].slurm job, you need to have first running the **sparkcluster_driver.slurm** job. 
 
-Also, you will need to modify Round_[1|2].slurm files according to your needs - e.g time, account, job name. But you will only need to **reserve 1 node** (36 cores).
+Also, you need to modify Round_[1|2].slurm files according to your needs - e.g time, account, job name. But you will only need to **reserve 1 node** (36 cores) for submitting defoe queries - **do not** use more than 1 NODE for running the defoe queries.
 
 ```
 #!/bin/bash
@@ -123,6 +123,7 @@ Also, you will need to modify Round_[1|2].slurm files according to your needs - 
 #SBATCH --qos=standard
 ```
 
+## Round 1 and Round 2 Results
 
 Results of these (Round 1 and Round 2) are updated [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx)
 
