@@ -41,6 +41,34 @@ cd $HOME/defoe
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_first_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_first_edition -n $NUMCORES > log_first_edition.txt 
 
 
+#### Keysearch
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_first.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_first_edition.txt  -n $NUMCORES > log.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_second.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_second_edition.txt  -n $NUMCORES > log.txt 
+ 1514  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_second.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_det
+ails queries/slavery.yml -r trade_legacy_slavery_eb_articles_second_edition.txt  -n $NUMCORES > log.txt 
+ 1516  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_first.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_deta
+ils queries/slavery.yml -r trade_legacy_slavery_eb_articles_first_edition.txt  -n $NUMCORES > log.txt 
+ 1523  park-submit --py-files defoe.zip defoe/run_query.py hdfs_data_fifth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_detai
+ls queries/slavery.yml -r trade_le
+ 1524  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_fourth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_det
+ails queries/slavery.yml -r trade_legacy_slavery_eb_articles_fourth_edition.txt  -n $NUMCORES > log.txt 
+ 1527  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_fifth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_deta
+ils queries/slavery.yml -r trade_le
+ 1528  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_fifth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_deta
+ils queries/slavery.yml -r trade_legacy_slavery_eb_articles_fifth_edition.txt  -n $NUMCORES > log.txt 
+ 1529  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_six.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_detail
+s queries/slavery.yml -r trade_legacy_slavery_eb_articles_sixth_edition.txt  -n $NUMCORES > log.txt 
+ 1530  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_seventh.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_de
+tails queries/slavery.yml -r trade_legacy_slavery_eb_articles_seventh_edition.txt  -n $NUMCORES > log.txt 
+ 1531  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_eighth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_det
+ails queries/slavery.yml -r trade_legacy_slavery_eb_articles_eighth_edition.txt  -n $NUMCORES > log.txt 
+ 1532  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_suplement.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_
+details queries/slavery.yml -r trade_legacy_slavery_eb_articles_4_5_6_suplements.txt  -n $NUMCORES > log.txt 
+
+
+ $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_suplement.txt hdfs defoe.hdfs.queries.keysear
+ch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_4_5_6_suplements.txt  -n $NUMCORES > log.txt 
 
 
 

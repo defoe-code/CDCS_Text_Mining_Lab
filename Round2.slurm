@@ -35,8 +35,12 @@ cd $HOME/defoe
 
 ############### SCOTS vs ENGLISH - ChapBooks ############################
 
-#### DETAILS
+#### DETAILS: Using two lexicons
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py chapbooks_data.txt nls defoe.nls.queries.window_keysearch_concordance_by_date queries/english.yml -r details_english_by_year.txt -n $NUMCORES > log_details_english
+
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py chapbooks_data.txt nls defoe.nls.queries.window_keysearch_concordance_by_date queries/scots.yml -r details_scots_by_year.txt -n $NUMCORES > log_details_scots
+
 
 
 #### NORMALIZE
