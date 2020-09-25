@@ -133,11 +133,13 @@ We have worked with the following datasets:
 
 We also had planned to work with the British Library Books (BL Books), which are stored at the UoE DataStore /sg/datastore/lib/groups/lac-store/blpaper. However, this dataset is too big for storing it in Cirrus.  
 
-### Transferring a subset of TDA newspapers to Cirrus
+### Transferring the 20th century TDA newspapers to Cirrus
+
+Example of how to transfer a subset of TDA newspapers - E.g. from 1900 to 2000 (20th Century). 
 
 ```
-mkdir -p $HOME/TDA_GDA_1785-2009/1900_1999/
-cd $HOME/TDA_GDA_1785-2009/1900_1999/
+mkdir -p $HOME/TDA_GDA_1785-2009/
+cd $HOME/TDA_GDA_1785-2009/
 sftp -oPort=22222 XXX@chss.datastore.ed.ac.uk:/chss/datastore/chss/groups/Digital-Cultural-Heritage/LBORO/TimesDigitalArchive_XMLS/TDA_GDA_1785-2009
 
 Connected to chss.datastore.ed.ac.uk.
@@ -145,10 +147,12 @@ Changing to: /chss/datastore/chss/groups/Digital-Cultural-Heritage/LBORO/TimesDi
 
 sftp> get 19[0-9][0-9]/*/*.xml .
 ```
-### Example of how to creating the data file needed for defoe - to run queries against the downloaded dataset. 
+### Example of how to create a data file with all XML files 
+
+This data file is needed for running defoe queries against the downloaded dataset. 
 
 ```
-find $HOME/TDA_GDA_1785-2009/1900_1999/ -name "*.xml" | sort > tda_1900_1999.txt
+find $HOME/TDA_GDA_1785-2009/ -name "*.xml" | sort > tda_1900_1999.txt
 ```
 
 # Round 1 and Round 2 Results
