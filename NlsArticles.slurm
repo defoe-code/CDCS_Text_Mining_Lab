@@ -34,41 +34,49 @@ NUMWORKERS=$(echo $NUM| cut -d' ' -f1)
 NUMCORES=$( expr 32 '*' "$NUMWORKERS")
 
 
-echo "Number of cores fpr this query is" $NUMCORES
+echo "Number of cores for this query is" $NUMCORES
 cd $HOME/defoe
 
+#### Detecting automatically the EB articles; preprocessing them ; and storing them as HDFS files.
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_first_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_first_edition -n $NUMCORES > log_first_edition.txt 
 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_second_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_second_edition -n $NUMCORES > log_second_edition.txt 
 
-#### Keysearch
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_thrid_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_third_edition -n $NUMCORES > log_third_edition.txt 
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_first.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_first_edition.txt  -n $NUMCORES > log.txt 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_second.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_second_edition.txt  -n $NUMCORES > log.txt 
- 1514  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_second.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_det
-ails queries/slavery.yml -r trade_legacy_slavery_eb_articles_second_edition.txt  -n $NUMCORES > log.txt 
- 1516  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_first.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_deta
-ils queries/slavery.yml -r trade_legacy_slavery_eb_articles_first_edition.txt  -n $NUMCORES > log.txt 
- 1523  park-submit --py-files defoe.zip defoe/run_query.py hdfs_data_fifth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_detai
-ls queries/slavery.yml -r trade_le
- 1524  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_fourth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_det
-ails queries/slavery.yml -r trade_legacy_slavery_eb_articles_fourth_edition.txt  -n $NUMCORES > log.txt 
- 1527  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_fifth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_deta
-ils queries/slavery.yml -r trade_le
- 1528  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_fifth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_deta
-ils queries/slavery.yml -r trade_legacy_slavery_eb_articles_fifth_edition.txt  -n $NUMCORES > log.txt 
- 1529  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_six.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_detail
-s queries/slavery.yml -r trade_legacy_slavery_eb_articles_sixth_edition.txt  -n $NUMCORES > log.txt 
- 1530  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_seventh.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_de
-tails queries/slavery.yml -r trade_legacy_slavery_eb_articles_seventh_edition.txt  -n $NUMCORES > log.txt 
- 1531  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_eighth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_det
-ails queries/slavery.yml -r trade_legacy_slavery_eb_articles_eighth_edition.txt  -n $NUMCORES > log.txt 
- 1532  $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_suplement.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_
-details queries/slavery.yml -r trade_legacy_slavery_eb_articles_4_5_6_suplements.txt  -n $NUMCORES > log.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_fourth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_fourth_edition -n $NUMCORES > log_fourth_edition.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_fifth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_fifth_edition -n $NUMCORES > log_fifth_edition.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_sixth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_sixth_edition -n $NUMCORES > log_sixth_edition.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_seventh_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_seventh_edition -n $NUMCORES > log_seventh_edition.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_eighth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_eighth_edition -n $NUMCORES > log_eighth_edition.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_suplements.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_suplements_edition -n $NUMCORES > log_suplements_edition.txt 
 
 
- $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_suplement.txt hdfs defoe.hdfs.queries.keysear
-ch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_4_5_6_suplements.txt  -n $NUMCORES > log.txt 
+#### Running the keysearch_articles_by_year_details QUERY against the HDFS files previously calculated
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_first.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_first_edition.txt  -n $NUMCORES > log_1.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_second.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_second_edition.txt  -n $NUMCORES > log_2nd.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_fourth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_thrid_edition.txt  -n $NUMCORES > log_3rd.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_fourth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_fourth_edition.txt  -n $NUMCORES > log_4th.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_fifth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_fifth_edition.txt  -n $NUMCORES > log_5th.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_six.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_sixth_edition.txt  -n $NUMCORES > log_6th.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_seventh.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_seventh_edition.txt  -n $NUMCORES > log_7th.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_eighth.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_eighth_edition.txt  -n $NUMCORES > log_8th.txt 
+
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py hdfs_data_suplement.txt hdfs defoe.hdfs.queries.keysearch_articles_by_year_details queries/slavery.yml -r trade_legacy_slavery_eb_articles_4_5_6_suplements.txt  -n $NUMCORES > log_suplements.txt 
 
 
 
