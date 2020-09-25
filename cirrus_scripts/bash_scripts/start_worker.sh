@@ -6,6 +6,8 @@ export HOSTNAME=`hostname`
 module load anaconda/python3
 source activate cirrus-py36
 
+echo "I am at " $HOSTNAME "and the master is " $hostmaster
+
 if [ $HOSTNAME != $hostmaster ] && [ $HOSTNAME != $hostdriver ]
 then
  echo "Started SLAVE on `hostname`"
@@ -15,6 +17,6 @@ then
  sbin/start-slave.sh $hostmaster:7077
 
 else
-  echo "Master or driver node- I dont start an SLAVE on " $HOSTNAME
+  echo "Master" $hostmaster "or driver node" $hostdriver" - I dont start an SLAVE on " $HOSTNAME
 fi
 
