@@ -40,7 +40,7 @@ cd $HOME/defoe
 
 #### Slave Trade at EB:
 
-#Investigasting the slave trade and how it permeates the different volumes of the encyclopaedia Brittanica.  We’ve got a list of keywords (slavery.txt), that we would like looked up. So we want to look those terms at:
+#Investigasting the slave trade and how it permeates the different volumes of the encyclopaedia Brittanica.  We’ve got a list of keywords (slavery_trade.txt), that we would like looked up. So we want to look those terms at:
 # - page level: returning the snippet (20 words before and after each term) every time a term is found in a page 
 # - article level: returning the whole article returned every time a term is foun in an article
 
@@ -49,7 +49,7 @@ cd $HOME/defoe
 
 ## Experiment 1: At Page level
 
-# Using a window_keysearch_concordance_by_date.py, which for each time a keyword/keysentence from slavery.txt is found in A PAGE, it returns  some metadata (archive filename, page filename, edition, title) + term (keyword/keysentence) + snippet (20 words before and after the term).  And it groups the results by year.
+# Using a window_keysearch_concordance_by_date.py, which for each time a keyword/keysentence from slavery_trade.txt is found in A PAGE, it returns  some metadata (archive filename, page filename, edition, title) + term (keyword/keysentence) + snippet (20 words before and after the term).  And it groups the results by year.
 
 # Running this query by editions, so we have one file of results per edition.
 
