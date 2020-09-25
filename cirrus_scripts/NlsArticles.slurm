@@ -5,7 +5,7 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=36
 #SBATCH --cpus-per-task=1
-#SBATCH --account=sc048
+#SBATCH --account=xxxxx
 #SBATCH --partition=standard
 #SBATCH --qos=standard
  
@@ -17,7 +17,7 @@ source activate cirrus-py36
 export SPARK_HOME=$HOME/spark-2.4.0-bin-hadoop2.7
 export SPARK_MASTER_HOST=$HOSTNAME
 export SPARK_MASTER_PORT=7077
-export SPARK_MASTER_WEBUI_PORT=8080
+export SPARK_MASTER_WEB:UI_PORT=8080
 export PATH=$SPARK_HOME/sbin:$SPARK_HOME/bin:$PATH
 export HADOOP_HOME=$HOME/HADOOP/hadoop-2.9.2
 export HADOOP_CONF_DIR=$HOME/HADOOP/conf_dir
