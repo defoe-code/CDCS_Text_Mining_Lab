@@ -1,5 +1,5 @@
 
-This document sets out how to start to formulate queries to find useful returns in large scale textual datasets. Normally, we’d also ask what type of results you want out of the system - returning full articles, or paragraphs, or sentences, but for this initial phase we’ll just be providing a count of the terms, to give a sense of how many “hits” (frequency query) you will have to set up a work flow to deal with. 
+This document sets out how to start to formulate queries to find useful returns in large scale textual datasets. 
 
 For running a frequency query we need to define 6 parameters (some of them are optional):
 
