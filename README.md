@@ -157,8 +157,9 @@ find $HOME/TDA_GDA_1785-2009/ -name "*.xml" | sort > tda_1900_1999.txt
 
 # Round 1 and Round 2 Results
 
-Results of these (Round 1 and Round 2) are updated [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx)
-Furthermore, we have created several notebooks for visualizing the frequency results:
+Results of these query (Round 1 and Round 2) are uploaded [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx).
+
+Furthermore, we have also created several **notebooks for visualizing the frequency results**:
 
 - [Frequency visualizations for Round 1](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1)
 - [Frequency visualizations for Round 2](https://github.com/defoe-code/defoe_visualization/tree/master/Round_2)
@@ -167,7 +168,7 @@ Furthermore, we have created several notebooks for visualizing the frequency res
 
 We also started an investigation on the slave trade and how it permeates the different volumes of the encyclopaedia Brittanica. See [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm). We performed the same study, at two levels: 
  
- - Page level: Getting an snippet every time a term from a [lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in a **page** of the EB. We have run this query per edition. So we have a result file at page level per edition. Furthermore, we also have run the frequency query of those terms, and the results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras). 
+ - Page level: Getting an snippet every time a term from a [lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in a **page** of the EB. We have run this query per edition. So we have a result file at page level per edition. Furthermore, we also have run the frequency query of those terms, and the **results can be visualized** [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras). 
  
  
  - Article level: Getting the article text every time a term from a [particular lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in an **article** of the EB. For doing this, we need first to run a query to detect automatically the articles of each EB edition, and store those articles in HDFS files. And later, we can use those files, for selecting the desired articles. We again have run this query per edition. So we have a result file at article level per edition.
