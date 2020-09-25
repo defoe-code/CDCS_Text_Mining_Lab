@@ -37,16 +37,13 @@ conda create -n cirrus-py36 python=3.6 anaconda
 To activate an active environment, use:
 
 ```
-
 source activate cirrus-py36
-
 ```
 
 To deactivate an active environment, use:
 
 ```
 source deactivate
-
 ```
 
 # 3. Installing defoe in Cirrus (inside the conda enviroment)
@@ -58,7 +55,6 @@ git clone https://github.com/defoe-code/defoe.git
 source activate cirrus-py36
 cd defoe
 ./requirements.sh
-
 >> python
 >> import nltk
    nltk.download('wordnet')
@@ -71,7 +67,6 @@ To start a spark cluster in Cirrus the only thing needed is to run following com
 
 ```
    >> sbatch sparkcluster_driver.slurm 
-   
 ```
 
 We have to wait until the job is running before proceding to run defoe queries.  
@@ -88,7 +83,6 @@ You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Te
 #SBATCH --account=XXXX
 #SBATCH --partition=standard
 #SBATCH --qos=standard
-
 ```
 
 # 5. Submitting defoe queries for Round 1 and Round 2.
