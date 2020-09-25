@@ -55,7 +55,7 @@ git clone https://github.com/defoe-code/defoe.git
 source activate cirrus-py36
 cd defoe
 ./requirements.sh
->> python
+python
 >> import nltk
    nltk.download('wordnet')
 bash scripts/download_ntlk_corpus.sh
@@ -66,12 +66,12 @@ bash scripts/download_ntlk_corpus.sh
 To start a spark cluster in Cirrus the only thing needed is to run following command:
 
 ```
-   >> sbatch sparkcluster_driver.slurm 
+sbatch sparkcluster_driver.slurm 
 ```
 
 We have to wait until the job is running before proceding to run defoe queries.  
 
-You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/cirrus_scripts/sparkcluster_driver.slurm) according to your need. For example, for chaning the amount of time, number of nodes, and account. The current script configures a spark cluster of 324 cores. 
+You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/sparkcluster_driver.slurm) according to your need. For example, for chaning the amount of time, number of nodes, and account. The current script configures a spark cluster of 324 cores. 
 
 ```
 #SBATCH --job-name=SPARKCLUSTER
@@ -101,10 +101,10 @@ Round 1:
    
 Each reserch project/study had a serie of defoe queries. In most of them, we first submitted a frequency query modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another query for getting the details (text) of the desired/filtered articles. The requirements were collected using this [document](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Readme.md)
 
-So, we have created two slurm jobs, one per Round: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/cirrus_scripts/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/cirrus_scripts/Round2.slurm). You can comment the studies that do not want to run.
+So, we have created two slurm jobs, one per Round: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm). You can comment the studies that do not want to run.
 
   ```
-   >> sbatch Round_1.slurm
+ sbatch Round_1.slurm
    ```
 Note, that for running Round_[1|2].slurm job, you need to have first running the **sparkcluster_driver.slurm** job. 
 
@@ -123,7 +123,35 @@ Also, you need to modify Round_[1|2].slurm files according to your needs - e.g t
 #SBATCH --qos=standard
 ```
 
-## Round 1 and Round 2 Results
+# 6. DATASET
+
+We have worked with the following datasets: 
+
+- Times Digital Archive (TDA): Stored at UoE DataStore /chss/datastore/chss/groups/Digital-Cultural-Heritage
+- [Encyclopaedia Britannica](https://nlsfoundry.s3.amazonaws.com/data/nls-data-encyclopaediaBritannica.zip)
+- [ChapBooks](https://nlsfoundry.s3.amazonaws.com/data/nls-data-chapbooks.zip)
+
+We also had planned to work with the British Library Books (BL Books), which are stored at the UoE DataStore /sg/datastore/lib/groups/lac-store/blpaper. However, this dataset is too big for storing it in Cirrus.  
+
+### Transferring a subset of TDA newspapers to Cirrus
+
+```
+mkdir -p $HOME/TDA_GDA_1785-2009/1900_1999/
+cd $HOME/TDA_GDA_1785-2009/1900_1999/
+sftp -oPort=22222 XXX@chss.datastore.ed.ac.uk:/chss/datastore/chss/groups/Digital-Cultural-Heritage/LBORO/TimesDigitalArchive_XMLS/TDA_GDA_1785-2009
+
+Connected to chss.datastore.ed.ac.uk.
+Changing to: /chss/datastore/chss/groups/Digital-Cultural-Heritage/LBORO/TimesDigitalArchive_XMLS/TDA_GDA_1785-2009
+
+sftp> get 19[0-9][0-9]/*/*.xml .
+```
+### Example of how to creating the data file needed for defoe - to run queries against the downloaded dataset. 
+
+```
+find $HOME/TDA_GDA_1785-2009/1900_1999/ -name "*.xml" | sort > tda_1900_1999.txt
+```
+
+# Round 1 and Round 2 Results
 
 Results of these (Round 1 and Round 2) are updated [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx)
 
