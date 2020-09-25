@@ -159,3 +159,13 @@ find $HOME/TDA_GDA_1785-2009/ -name "*.xml" | sort > tda_1900_1999.txt
 
 Results of these (Round 1 and Round 2) are updated [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx)
 
+# Study of the Trade Legacy Slavery on Encyclopaedia Britannica (EB)
+
+Additionally, we also performed an study of the [trade of slavery](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm), at two levels:
+ 
+ - Page level: Getting an snippet every time a term from a [particular lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in a **page** of the EB
+ 
+ - Article level: Getting the article text every time a term from a [particular lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in an **article** of the EB. For doing this, we need first to run a query to detect automatically the articles of the EB, and store those in HDFS files. 
+ 
+ 
+
