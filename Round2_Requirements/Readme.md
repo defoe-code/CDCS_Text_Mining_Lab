@@ -57,20 +57,24 @@ Those treatments allow us to include in our query variations of the specified te
 We have two options:
 
 - By lexicon words:
-<WORD>:
-- [<YEAR>, <NUM_WORDS>]
-- ...
-<WORD>:
-...
+	<WORD>:
+	- [<YEAR>, <NUM_WORDS>]
+	- ...
+	<WORD>:
+	- [<YEAR>, <NUM_WORDS>]
+	- ...
+
 Example of grouping results by [lexicon words](https://github.com/alan-turing-institute/defoe_visualization/blob/master/Diseases/results/tuberculosis.yml)
 
 - By time: 
-<YEAR>:
-- [<WORD>, <NUM_WORDS>]
-- ...
-<YEAR>:
-...
-Example grouping results by [time]( https://github.com/alan-turing-institute/defoe_visualization/blob/master/Female_Emigration/TDA/results_TDA/results_tda_society_1850_1914(
+	<YEAR>:
+	- [<WORD>, <NUM_WORDS>]
+	- ...
+	<YEAR>:
+	- [<WORD>, <NUM_WORDS>]
+	- ...
+
+Example grouping results by [time](https://github.com/alan-turing-institute/defoe_visualization/blob/master/Female_Emigration/TDA/results_TDA/results_tda_society_1850_1914(
 
 ## Example of Frequency query
 
