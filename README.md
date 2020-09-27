@@ -166,7 +166,7 @@ Furthermore, we have also created several **notebooks for visualizing frequency 
 We also started an investigation on the slave trade and how it permeates the different volumes of the Encyclopaedia Brittanica (EB). We have a lexicon, [slavery_trade.txt](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt), that we looked up at two levels:
 
 - **Page level**: returning a snippet (40 words before and after each term) every time a term is found in a page.
-- **Article level**: returning an article every time a term is foun in an article. For doing this, we need first to extract the articles per EB page, and store them in HDFS files (one per edition). See more [here](https://data.nls.uk/projects/high-performance-computing-meets-encyclopaedia-britannica/). 
+- **Article level**: returning an article every time a term is foun in an article. For doing this, we need first to extract the articles per EB page, and store them in HDFS files (one per edition). See more [bellow](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/README.md#extracting-articles-from-encyclopaedia-britannica-eb). 
 
 At **page level** we also run the frequency query using the same lexicon. 
 
@@ -197,24 +197,23 @@ Finally, we have created a new defoe query for extracting automatically articles
  - edition: Edition of the book (e.g Eighth edition, Volume 2, A-Anatomy)
  - year: Year of publication/edition (e.g. 1853)
  - place: Place (e.g. Edinburgh)      
- - archive_filename: Directory Path of the book ( e.g. /home/rosa_filgueira_vicente/datasets/single_EB/193322698/)     
+ - archive_filename: Directory Path of the book (e.g. /home/rosa_filgueira_vicente/datasets/single_EB/193322698/)     
  - source_text_filename: Directory Path of the page (e.g. alto/193403113.34.xml)
- - text_unit: Unit that represent each ALTO XML (e.g Page) – could be Page|Issue …
+ - text_unit: Unit that represent each ALTO XML. These could be Page or Issue. 
  - text_unit_id: Id of the page (e.g. Page704)
- - num_text_unit: Number of pages ( e.g. 904)
- - type_archive: Type of archive (e.g. book) – could be book | newspaper …
+ - num_text_unit: Number of pages (e.g. 904)
+ - type_archive: Type of archive. Thse could be book or newspapers. 
  - model: defoe model used for ingesting this dataset (nlsArticles)
- - type_page: The page classification that has been done by defoe  (e.g Topic) – could be Topic|Articles|Mix|Full Page
- - header: The header of the page (e.g. EG AMERICA)
- - **term**: Term that is going to be described (e.g.  AMERICA)
- - **definition**: Words describing an article / topic/ full page: ( e.g. “AMERICA. being inhabited. The Aleutian Isles, besides, at the latitude of 53°….”
- - num_articles: Number of articles per page. In the case the page has been classified as Topic or FullPage, the number of articles will be 1.
+ - type_page: The page classification that has been done by defoe. These could be Topic, Articles, Mix or Full Page. 
+ - header: The header of the page (e.g. AMERICA)
+ - **term**: Term that is going to be described (e.g. AMERICA)
+ - **definition**: Words describing an article / topic/ full page: ( e.g. “AMERICA. being inhabited. The Aleutian ….”)
+ - num_articles: Number of articles per page. In case a page has been classified as Topic or FullPage, the number of articles is 1.
  - num_page_words: Number of words per page (e.g. 1373)
  - num_article_words: Number of words of an article (e.g. 1362)
  
-The EB has two types of articles with two very different patterns at the “page” level:
- 
- - *Short articles* (named as **articles**): Usually presented by a TERM in the main text in uppercase,  followed by a “,”  (e.g. ALARM, ) and then a DESCRIPTION of the TERM (similar to an entry in a dictionary). This description normally is 1 or 2 paragraphs, but of course there are exceptions.  	
+We have detected two types of articles with two different patterns at “page” level:
+  - *Short articles* (named as **articles**): Usually presented by a TERM in the main text in uppercase,  followed by a “,”  (e.g. ALARM, ) and then a DESCRIPTION of the TERM (similar to an entry in a dictionary). This description normally is one or two paragraphs, but of course there are exceptions.  	
 	- Term: ALARM
 	- Definition: in the Military Art, denotes either the apprehension of being suddenly attacked, or the notice thereof signified by firing a cannon, firelock, or the like. False alarms are frequently made use of to harass the enemy, by keeping them constantly under arms. , ….
  
