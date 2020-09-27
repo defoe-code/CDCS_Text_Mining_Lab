@@ -8,7 +8,11 @@ This project proposes to run a target-frequency query, using different scientifi
 
 With the results, different plots will be needed to understand the shape of each “hype curve” associated with each target word. 
 
-Results group by time and also by specialist and non-specialist literature. 
+Results group by time and also by specialist and non-specialist literature.
+
+## Quer(ies) Parameters
+
+Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1_Requirements/Edward/Query_Inputs.md).
 
 ## Results
 
