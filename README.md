@@ -1,5 +1,5 @@
 
-For running TDM defoe querie in Cirrus, we have to start a spark cluster, and once the cluster is running, then we can submit the defoe queries to such cluster. 
+For running TDM defoe querie in [Cirrus](https://cirrus.readthedocs.io/en/master/), we have to start a spark cluster, and once the cluster is running, then we can submit the defoe queries to such cluster. 
 
 We have divided the defoe queries performed in TDM in two Rounds: Round 1 and Round 2. Each Round has a different set of studies. 
 
@@ -130,7 +130,7 @@ We have worked with the following datasets:
 - Times Digital Archive (TDA): Stored at UoE DataStore /chss/datastore/chss/groups/Digital-Cultural-Heritage
 - [Encyclopaedia Britannica](https://nlsfoundry.s3.amazonaws.com/data/nls-data-encyclopaediaBritannica.zip)
 - [ChapBooks](https://nlsfoundry.s3.amazonaws.com/data/nls-data-chapbooks.zip)
-- [Scottish Gazetters]
+- [Scottish Gazetters](https://nlsfoundry.s3.amazonaws.com/data/nls-data-gazetteersOfScotland.zip)
 
 We also had planned to work with the British Library Books (BL Books), which are stored at the UoE DataStore /sg/datastore/lib/groups/lac-store/blpaper. However, this dataset is too big for storing it in Cirrus.  
 
@@ -169,12 +169,21 @@ Furthermore, we have also created several **notebooks for visualizing the freque
 
 We also started an investigation on the slave trade and how it permeates the different volumes of the encyclopaedia Brittanica. See [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm). We performed the same study, at two levels: 
  
- - Page level: Getting an snippet every time a term from this [lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in a **page** of the EB. We have run this query per edition. So we have a **result file at page level per edition** (see them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents)). Furthermore, we also have run the frequency query of those terms, and the **results can be visualized** [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras).
+ - **Page level**: Getting an snippet every time a term from this [lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in a **page** of the EB. We have run this query per edition. So we have a **result file at page level per edition** (see them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents)). Furthermore, we also have run the frequency query of those terms, and the **results can be visualized** [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras).
  
  
- - Article level: Getting the article text every time a term from this [lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in an **article** of the EB. For doing this, we need first to run a query to detect automatically the articles of each EB edition, and store those articles in HDFS files. And later, we can use those files, for selecting the desired articles. We again have run this query per edition. So we have a result file at article level per edition. **Results at article level** can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). 
+ - **Article level**: Getting the article text every time a term from this [lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in an **article** of the EB. For doing this, we need first to run a query to detect automatically the articles of each EB edition, and store those articles in HDFS files. And later, we can use those files, for selecting the desired articles. We again have run this query per edition. So we have a result file at article level per edition. **Results at article level** can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). 
  
 
- 
+# Geoparsing the Scottish Gazetters
+
+Furthermore, we continue our work on devising automatic and parallel methods for geoparsing large digital historical textual data by combining the strengths of three natural language processing (NLP) tools, the [Edinburgh Geoparser](https://www.ltg.ed.ac.uk/software/geoparser/), [spaCy](https://spacy.io/) and [defoe](https://github.com/defoe-code/defoe), and employing different tokenisation and named entity recognition (NER) techniques. We apply these tools to a large collection of nineteenth century [Scottish geographical](https://data.nls.uk/data/digitised-collections/gazetteers-of-scotland/) dictionaries. 
+
+This work is done in collaboration with the [Language Technology Group at Informatics](https://www.ltg.ed.ac.uk/projects/geoparsing-scottish-gazetteers/). 
+
+For running the defoe geoparsing queries we have not used Cirrus, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, we have used a VM for this. Instructions of how we have set up this VM with defoe, geoparser and Spark can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md). 
+
+A paper describing this work can be found [here](https://www.research.ed.ac.uk/portal/en/publications/geoparsing-the-historical-gazetteers-of-scotland-accurately-computing-location-in-mass-digitised-texts(d7154742-82dd-482c-a7bc-5b2f792fd0f4).html), and the notebooks presented in this paper can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
+
  
 
