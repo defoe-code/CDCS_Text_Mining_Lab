@@ -1,12 +1,9 @@
 
 For running TDM defoe querie in [Cirrus](https://cirrus.readthedocs.io/en/master/), we have to start a spark cluster, and once the cluster is running, then we can submit the defoe queries to such cluster. 
 
-We have divided the defoe queries performed in TDM in two Rounds: Round 1 and Round 2. Each Round has a different set of studies. 
+We have divided the defoe queries performed in the **CDCS TDM Lab** in two Rounds: **Round 1** and **Round 2**. Each Round has a different set of studies. 
 
-Cirrus do not have spark installed - so we need to install it in our $HOME directory. And later, we have to 
-
-
-
+Following we have a summary of the set of instructions needed to replicate this work. 
 
 # 1. Spark installation steps
 
