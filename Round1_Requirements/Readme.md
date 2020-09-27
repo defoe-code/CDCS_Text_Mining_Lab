@@ -1,5 +1,5 @@
 
-This document sets out how to start to formulate queries to find useful returns in large scale textual datasets. 
+This document sets out how to start to formulate **defoe queries** to find useful returns in large scale textual datasets. 
 
 For running a frequency query we need to define 6 parameters (some of them are optional):
 
@@ -64,7 +64,7 @@ We have two options:
 		- [YEAR, NUM_WORDS]
 		- ...
 
-Example of grouping results by [lexicon words](https://github.com/defoe-code/defoe_visualization/tree/master/Diseases/results/tuberculosis.yml)
+An example of grouping results by [lexicon words](https://github.com/defoe-code/defoe_visualization/tree/master/Diseases/results/tuberculosis.yml)
 
 - By time: 
 	- YEAR:
@@ -76,7 +76,7 @@ Example of grouping results by [lexicon words](https://github.com/defoe-code/def
 
 Example grouping results by [time](https://github.com/defoe-code/defoe_visualization/tree/master/Female_Emigration/TDA/results_TDA/results_tda_society_1850_1914)
 
-## Example of Frequency query
+## Example of a Frequency query
 
 We have used the frequency query, to calculate the frequency over time of the following Scotties Philosophers using the Encyclopaedia Britannica as our corpus: Francis Hutcheson, David Hume, Adam Smith, Dugald Stewart and Thomas Reid. 
 - Target Word(s): None
