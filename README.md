@@ -221,20 +221,22 @@ We have detected two types of articles with two different patterns at “page”
  
 Important: **Topic** is just the way we named the *long articles* that expands more than a page. It does not refer to “NLP topic”.
 
-Those files (one per edition, and also one with all articles) can be downloaded from [here](https://drive.google.com/file/d/1cZ5-OGw2uRkkrNEGet_ydZr7SdnLKEWn/view?usp=sharing). Once you decompressed the TAR file, you will find these:
+Those files (one per edition, and also one with all articles) can be downloaded from [here](https://drive.google.com/file/d/1cZ5-OGw2uRkkrNEGet_ydZr7SdnLKEWn/view?usp=sharing). Once you decompressed the *eb_articles_per_page.tar* file, you will find these:
 
   ```
->   36M 24 Aug 12:01 eb_first_edition_total_articles.csv
->   59M 24 Aug 12:08 eb_second_edition_total_articles.csv
->   158M 24 Aug 12:26 eb_third_edition_total_articles.csv
->   105M 24 Aug 12:06 eb_fourth_edition_total_articles.csv
->   110M 24 Aug 11:59 eb_fifth_edition_total_articles.csv
->   110M 24 Aug 12:19 eb_sixth_edition_total_articles.csv
->   129M 24 Aug 12:14 eb_seventh_edition_total_articles.csv
->   137M 24 Aug 11:54 eb_eighth_edition_total_articles.csv
->   70M 24 Aug 11:12 eb_4_5_6_suplement_total_articles.csv
->   913M 24 Aug 11:48 eb_all_editions_total_articles.csv -- It has all articles for all editions!
+> tar -zxvf eb_articles_per_page.tar .
+> ls -lht 
+36M 24 Aug 12:01 eb_first_edition_total_articles.csv
+59M 24 Aug 12:08 eb_second_edition_total_articles.csv
+158M 24 Aug 12:26 eb_third_edition_total_articles.csv
+105M 24 Aug 12:06 eb_fourth_edition_total_articles.csv
+110M 24 Aug 11:59 eb_fifth_edition_total_articles.csv
+110M 24 Aug 12:19 eb_sixth_edition_total_articles.csv
+129M 24 Aug 12:14 eb_seventh_edition_total_articles.csv
+137M 24 Aug 11:54 eb_eighth_edition_total_articles.csv
+70M 24 Aug 11:12 eb_4_5_6_suplement_total_articles.csv
+913M 24 Aug 11:48 eb_all_editions_total_articles.csv -- It has all articles for all editions!
   ```
   
-  In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the defoe queries necessaries for extracting the articles per edition and storing them in HDFS files.  
+In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files.  
 
