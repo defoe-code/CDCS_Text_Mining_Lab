@@ -1,5 +1,5 @@
 
-This document sets out how to start to formulate queries to find useful returns in large scale textual datasets. 
+This document sets out how to start to formulate **defoe queries** to find useful returns in large scale textual datasets. 
 
 For running a frequency query we need to define 6 parameters (some of them are optional):
 
@@ -64,7 +64,7 @@ We have two options:
 		- [YEAR, NUM_WORDS]
 		- ...
 
-Example of grouping results by [lexicon words](https://github.com/defoe-code/defoe_visualization/tree/master/Diseases/results/tuberculosis.yml)
+An example of grouping results by [lexicon words](https://github.com/defoe-code/defoe_visualization/tree/master/Diseases/results/tuberculosis.yml)
 
 - By time: 
 	- YEAR:
