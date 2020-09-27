@@ -1,7 +1,7 @@
 
 For running defoe queries in [Cirrus](https://cirrus.readthedocs.io/en/master/), we first have to start a [Spark cluster](https://spark.apache.org/docs/latest/cluster-overview.html) within a **SLURM job**. And once the Spark cluster is running, then we can submit defoe queries to that cluster. 
 
-We have divided work performed in the **CDCS TDM Lab** in two Rounds: **Round 1** and **Round 2**. Each Round has a different set of studies, and each study have a set of defoe queries. And also, we have started other studies, such as **Geoparsing the Scottish Gazetters** and **Trade Legacy Slavery**. Details of those can be found in this document.  
+We have divided work performed in the **CDCS TDM Lab** in two Rounds: **Round 1** and **Round 2**. Each Round has a different set of studies, and each study have a set of defoe queries. And also, we have started other studies, such as **Geoparsing the Scottish Gazetteers** and **Trade Legacy Slavery**. Details of those can be found in this document.  
 
 But first, we have a summary of the set of instructions needed to replicate this work. 
 
@@ -128,7 +128,7 @@ We have worked with the following datasets:
 - [Times Digital Archive](https://www.gale.com/intl/c/the-times-digital-archive) (TDA): Stored at UoE DataStore /chss/datastore/chss/groups/Digital-Cultural-Heritage
 - [Encyclopaedia Britannica](https://nlsfoundry.s3.amazonaws.com/data/nls-data-encyclopaediaBritannica.zip)
 - [ChapBooks](https://nlsfoundry.s3.amazonaws.com/data/nls-data-chapbooks.zip)
-- [Scottish Gazetters](https://nlsfoundry.s3.amazonaws.com/data/nls-data-gazetteersOfScotland.zip)
+- [Scottish Gazetteers](https://nlsfoundry.s3.amazonaws.com/data/nls-data-gazetteersOfScotland.zip)
 
 We had also planned to work with the British Library Books (BL Books), which are stored at the UoE DataStore /sg/datastore/lib/groups/lac-store/blpaper. However, this dataset is too big for storing it in Cirrus.  
 
@@ -181,7 +181,7 @@ The SLURM job to run this study can be found [here](https://github.com/defoe-cod
  - **Article level**: Text (articles) results can be found them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). 
  
 
-# Geoparsing the Scottish Gazetters
+# Geoparsing the Scottish Gazetteers
 
 Furthermore, we have continued our work on devising automatic and parallel methods for geoparsing large digital historical textual data by combining the strengths of three natural language processing (NLP) tools, the [Edinburgh Geoparser](https://www.ltg.ed.ac.uk/software/geoparser/), [spaCy](https://spacy.io/) and [defoe](https://github.com/defoe-code/defoe), and employing different tokenisation and named entity recognition (NER) techniques. We apply these tools to a large collection of nineteenth century [Scottish geographical](https://data.nls.uk/data/digitised-collections/gazetteers-of-scotland/) dictionaries. 
 
@@ -190,6 +190,8 @@ This work is done in collaboration with the [Language Technology Group at Inform
 For running the **defoe geoparsing queries we have not used Cirrus**, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, **we have used a VM** for this. **Instructions of how we have set up this VM** with defoe, geoparser and Spark can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md). 
 
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
+
+We have also extended this work, to geoparse the Encyclopaedia Britannica. 
 
 # Extracting articles from the Encyclopaedia Britannica (EB)
 
