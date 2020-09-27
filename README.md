@@ -166,7 +166,7 @@ Furthermore, we have also created several **notebooks for visualizing frequency 
 We also started an investigation on the slave trade and how it permeates the different volumes of the Encyclopaedia Brittanica (EB). We have a lexicon, [slavery_trade.txt](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt), that we looked up at two levels:
 
 - **Page level**: returning a snippet (40 words before and after each term) every time a term is found in a page.
-- **Article level**: returning an article every time a term is foun in an article. For doing this, we need first to extract the articles per EB page, and store them in HDFS files (one per edition). See more [bellow](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/README.md#extracting-articles-from-encyclopaedia-britannica-eb). 
+- **Article level**: returning an article every time a term is foun in an article. For doing this, we need first to extract the articles per EB page, and store them in CSV files (one per edition). See more [bellow](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/README.md#extracting-articles-from-encyclopaedia-britannica-eb). 
 
 At **page level** we also run the frequency query using the same lexicon. 
 
@@ -235,4 +235,6 @@ Those files (one per edition, and also one with all articles) can be downloaded 
 >   70M 24 Aug 11:12 eb_4_5_6_suplement_total_articles.csv
 >   913M 24 Aug 11:48 eb_all_editions_total_articles.csv -- It has all articles for all editions!
   ```
+  
+  In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job, you can find the dofoe queries necessaries for extracting the articles and stoing them inside the Hadoop File System. 
 
