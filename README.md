@@ -3,7 +3,7 @@ For running defoe queries in [Cirrus](https://cirrus.readthedocs.io/en/master/),
 
 We have divided the work performed in the **CDCS TDM Lab** in two Rounds: **Round 1** and **Round 2**. Each Round has a different set of studies, and each study have a set of defoe queries. In parallel, we have started other studies, such as **Geoparsing the Scottish Gazetteers** and **Trade Legacy Slavery**. Details of those can be found in this document.  
 
-But first, we have a summary of the set of instructions needed to replicate this work. 
+But first, we have a summary of the **instructions needed to replicate this work**. 
 
 # 1. Spark installation steps
 
