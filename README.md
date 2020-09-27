@@ -158,21 +158,29 @@ find $HOME/TDA_GDA_1785-2009/ -name "*.xml" | sort > tda_1900_1999.txt
 
 # Round 1 and Round 2 Results
 
-Results of these query (Round 1 and Round 2) are uploaded [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx).
+Results of these studies (Round 1 and Round 2) are uploaded [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx).
 
-Furthermore, we have also created several **notebooks for visualizing the frequency results**:
+Furthermore, we have also created several **notebooks for visualizing frequency results**:
 
 - [Frequency visualizations for Round 1](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1)
 - [Frequency visualizations for Round 2](https://github.com/defoe-code/defoe_visualization/tree/master/Round_2)
 
 # Trade Legacy Slavery
 
-We also started an investigation on the slave trade and how it permeates the different volumes of the encyclopaedia Brittanica. See [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm). We performed the same study, at two levels: 
+We also started an investigation on the slave trade and how it permeates the different volumes of the encyclopaedia Brittanica. We have a lexicon,[slavery_trade.txt](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt), that we would like to look up at:
+
+- **Page level**: returning a snippet (40 words before and after each term) every time a term is found in a page 
+- **Article level**: returning an article every time a term is foun in an article
+
+At **page level** we also run the frequency query using the same lexicon. 
+
+The SLURM job to run this study can be found [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm). 
  
- - **Page level**: Getting an snippet every time a term from this [lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in a **page** of the EB. We have run this query per edition. So we have a **result file at page level per edition** (see them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents)). Furthermore, we also have run the frequency query of those terms, and the **results can be visualized** [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras).
+ ### Preliminary Results 
  
+ - **Page level**: Text (snippet) results can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents)). Frequency results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras).
  
- - **Article level**: Getting the article text every time a term from this [lexicon](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt) is found in an **article** of the EB. For doing this, we need first to run a query to detect automatically the articles of each EB edition, and store those articles in HDFS files. And later, we can use those files, for selecting the desired articles. We again have run this query per edition. So we have a result file at article level per edition. **Results at article level** can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). 
+ - **Article level**: Text (articles) results can be found them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). 
  
 
 # Geoparsing the Scottish Gazetters
