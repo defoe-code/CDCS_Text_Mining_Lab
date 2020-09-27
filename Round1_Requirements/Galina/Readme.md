@@ -13,5 +13,7 @@ Two queries are proposed:
 
 Results will be compared to be if there are any correlations of results.
 
+**Frequency results** using eight different lexicons can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Galina_Andreeva).
+
 
 
