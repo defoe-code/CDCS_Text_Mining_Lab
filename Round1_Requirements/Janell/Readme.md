@@ -17,5 +17,8 @@ With the subset of articles found (that talks about DSM), the project could crea
 
 The project will benefit as well from creating a new sentiment analyses query to study explicit and implicit bias categories.  These tasks will be challenging, and new queries in defoe will need to be implemented. 
 
+## Results
 
 **Frequency Results** using different lexicons (*explict*, *neutral*, *implicit*) can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Janell_Kwork). 
+
+**Raw Results (frequencies and articles' text)** can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2FJanell%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents).
