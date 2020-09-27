@@ -13,7 +13,15 @@ Two queries are proposed:
 
 Results will be compared to be if there are any correlations of results.
 
+
+## Results
+
 **Frequency results** using eight different lexicons can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Galina_Andreeva).
+
+**Raw results (frequency and articles' text)** can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2FGalina%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents).
+
+
+
 
 
 
