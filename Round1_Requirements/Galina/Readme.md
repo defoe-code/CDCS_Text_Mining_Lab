@@ -1,5 +1,6 @@
 ## Project Description
 
+**Exploring the role of media in economic effects of epidemics**
 
 The project seeks to understand the role that newspapers may have played (and are playing) in the economic effects of the epidemics: 
 
