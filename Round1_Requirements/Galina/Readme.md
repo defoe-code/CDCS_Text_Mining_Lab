@@ -9,7 +9,7 @@ The project seeks to understand the role that newspapers may have played (and ar
 
 Two queries are proposed: 
 -	Searches based on years and taxonomy terms relating to epidemics 
--	Searches based on years and taxonomy for economic consequences 
+-	Searches based on years and taxonomy for economic consequences (*not covered during the project*)
 
 Results will be compared to be if there are any correlations of results.
 
