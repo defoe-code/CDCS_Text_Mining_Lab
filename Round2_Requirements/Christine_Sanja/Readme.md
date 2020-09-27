@@ -15,6 +15,12 @@ Therefore, we want to use defoe to look at the TDA newspapers and identify how t
 - Creating a corpus of only those articles that use the relevant terms, and then running topic models on them
 - Using the results of the topic models to compare to historical conflict data or historical political data (like the historical V-Dem, which goes back to about the same time, in the late 1700s).
 - Running a geoparser to identify locations which are mentioned in relation to peace
+
+
+## Quer(ies) Parameters
+
+Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Christine_Sanja/Query_Inputs.md).
+
  
 ## Results 
 
