@@ -189,9 +189,9 @@ For running the **defoe geoparsing queries we have not used Cirrus**, since it r
 
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
 
-# Extracting articles from Encyclopaedia Britannica (EB)
+# Extracting articles from the Encyclopaedia Britannica (EB)
 
-Finally, we have created a new defoe query for extracting automatically articles from EB. The results are stored per edition (and also we have them in a single file), in CSV files. Each CSV file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
+Finally, we have created a new defoe query for extracting automatically articles from the EB. The results are stored per edition (and also we have them in a single file), in CSV files. Each CSV file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
  
  - title: Title of the book (e.g. Encyclopaedia Britannica)
  - edition: Edition of the book (e.g Eighth edition, Volume 2, A-Anatomy)
