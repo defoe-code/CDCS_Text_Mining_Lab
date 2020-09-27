@@ -1,9 +1,9 @@
 
-For running defoe queries in [Cirrus](https://cirrus.readthedocs.io/en/master/), we have to start a [Spark cluster](https://spark.apache.org/docs/latest/cluster-overview.html) within a **SLURM job**. And once the Spark cluster is running, then we can submit the defoe queries to such cluster. 
+For running defoe queries in [Cirrus](https://cirrus.readthedocs.io/en/master/), we first have to start a [Spark cluster](https://spark.apache.org/docs/latest/cluster-overview.html) within a **SLURM job**. And once the Spark cluster is running, then we can submit defoe queries to that cluster. 
 
-We have divided work performed in the **CDCS TDM Lab** in two Rounds: **Round 1** and **Round 2**. Each Round has a different set of studies, and each study have a set of defoe queries. 
+We have divided work performed in the **CDCS TDM Lab** in two Rounds: **Round 1** and **Round 2**. Each Round has a different set of studies, and each study have a set of defoe queries. And also, we have started other studies, such as **Geoparsing the Scottish Gazetters** and **Trade Legacy Slavery**. Details of those can be found in this document.  
 
-Bellow we have a summary of the set of instructions needed to replicate this work. 
+But first, we have a summary of the set of instructions needed to replicate this work. 
 
 # 1. Spark installation steps
 
