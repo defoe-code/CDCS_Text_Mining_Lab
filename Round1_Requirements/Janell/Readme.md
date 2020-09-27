@@ -1,6 +1,8 @@
 
 ## Project description
 
+**Statistical Manual of Mental Disorder (DSM)*
+
 This project looks to answer two question:
 
 - whether there is increased reporting accuracy of mental illness symptoms against the Diagnostic and Statistical Manual of Mental Disorders (DSM) over time
