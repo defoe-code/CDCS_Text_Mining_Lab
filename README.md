@@ -97,9 +97,9 @@ A description of each research project/study can be found as follows:
    - [Christine Bell and Sanja Badanjak](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Christine_Sanja): Peace/War study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
    - [Sarah Van eydhoven and Lisa Gotthard](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Sarah_Lisa): Scots vs English - [NLS chapbooks](https://data.nls.uk/data/digitised-collections/chapbooks-printed-in-scotland/)
    
-Each reserch project/study had a serie of defoe queries. In most of them, we first submitted a frequency query modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another query for getting the details (text) of the desired/filtered articles/pages. The requirements were collected using this [document](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Readme.md) as a baseline for formulating defoe queries.
+Each reserch project/study has a serie of defoe queries. In most of them, we first submitted a *frequency query* modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another *query for getting the details (text)* of the desired/filtered articles/pages. The **requirements** were collected using this [document](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Readme.md) as a **baseline for formulating defoe queries**.
 
-Therefore, we created two slurm jobs, one per Round: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm). You can comment the studies that do not want to run.
+Therefore, we created **two slurm jobs**, one per Round: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm). You can comment the studies that do not want to run.
 
   ```
  sbatch Round_1.slurm
@@ -121,7 +121,7 @@ Also, you need to modify Round_[1|2].slurm files according to your needs - e.g t
 #SBATCH --qos=standard
 ```
 
-# 6. DATASET
+# 6. DATASETS
 
 We have worked with the following datasets: 
 
@@ -163,7 +163,7 @@ Furthermore, we have also created several **notebooks for visualizing frequency 
 - [Frequency visualizations for Round 1](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1)
 - [Frequency visualizations for Round 2](https://github.com/defoe-code/defoe_visualization/tree/master/Round_2)
 
-# Trade Legacy Slavery
+# Trade Legacy Slavery Study
 
 We also started an investigation on the slave trade and how it permeates the different volumes of the [Encyclopaedia Brittanica](https://data.nls.uk/data/digitised-collections/encyclopaedia-britannica/) (EB). We have a lexicon, [slavery_trade.txt](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt), that we looked up at two levels:
 
@@ -193,7 +193,7 @@ For running the **defoe geoparsing queries we have not used Cirrus**, since it r
 
 Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. 
 
-# Extracting articles from the Encyclopaedia Britannica (EB)
+# Extracting automatically the articles from the Encyclopaedia Britannica (EB)
 
 Finally, we have created a new defoe query for extracting automatically articles from the EB. The results are stored per edition (and also we have them in a single file), in CSV files. Each CSV file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
  
