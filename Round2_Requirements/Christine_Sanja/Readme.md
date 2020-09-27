@@ -16,6 +16,8 @@ Therefore, we want to use defoe to look at the TDA newspapers and identify how t
 - Using the results of the topic models to compare to historical conflict data or historical political data (like the historical V-Dem, which goes back to about the same time, in the late 1700s).
 - Running a geoparser to identify locations which are mentioned in relation to peace
  
+## Results 
+
 **Frequency results** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_2/Christine_Sanja).
 **Article's text results** are available here:
 - [Original text](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2FChristine%5FSanja%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents)
