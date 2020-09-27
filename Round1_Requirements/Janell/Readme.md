@@ -1,7 +1,7 @@
 
 ## Project description
 
-**Statistical Manual of Mental Disorder (DSM)*
+**Statistical Manual of Mental Disorder (DSM)**
 
 This project looks to answer two question:
 
