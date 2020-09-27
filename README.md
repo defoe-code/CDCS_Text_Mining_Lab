@@ -89,13 +89,13 @@ You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Te
 
 During this summer, we conducted a serie of studies within the [CDCS text-mining lab](https://www.cdcs.ed.ac.uk/cdcs-text-mining-lab-call-projects?utm_campaign=2619665_CDCS%20Digest%20W%2FC%2016%20March%202020&utm_medium=email&utm_source=College%20of%20Arts%2C%20Humanities%20%26%20Social%20Sciences%2C%20The%20University%20of%20Edinburgh&dm_t=0,0,0,0,0), in which we worked with humanities and social science researchers who can ask complex questions of large-scale data sets. We selected four research projects for [Round 1](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements), and two for [Round 2](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements). 
 
-Round 1:
+**Round 1**:
    - [Jannel Kwork](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Janell): DSM study - TDA newspapers
    - [Dave O'Brien](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Dave): Music study - TDA newspapers
    - [Edward Martin](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Edward): Science study - TDA newspapers
    - [Galina Andreeva](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Galina): Pandemics study - TDA newspapers
    
- Round 2:
+ **Round 2**:
    - [Christine Bell and Sanja Badanjak](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Christine_Sanja): Peace/War study - TDA newspapers
    - [Sarah Van eydhoven and Lisa Gotthard](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Sarah_Lisa): Scots vs English - NLS chapbooks
    
@@ -177,7 +177,7 @@ We also started an investigation on the slave trade and how it permeates the dif
 
 # Geoparsing the Scottish Gazetters
 
-Furthermore, we continue our work on devising automatic and parallel methods for geoparsing large digital historical textual data by combining the strengths of three natural language processing (NLP) tools, the [Edinburgh Geoparser](https://www.ltg.ed.ac.uk/software/geoparser/), [spaCy](https://spacy.io/) and [defoe](https://github.com/defoe-code/defoe), and employing different tokenisation and named entity recognition (NER) techniques. We apply these tools to a large collection of nineteenth century [Scottish geographical](https://data.nls.uk/data/digitised-collections/gazetteers-of-scotland/) dictionaries. 
+Furthermore, we have continued our work on devising automatic and parallel methods for geoparsing large digital historical textual data by combining the strengths of three natural language processing (NLP) tools, the [Edinburgh Geoparser](https://www.ltg.ed.ac.uk/software/geoparser/), [spaCy](https://spacy.io/) and [defoe](https://github.com/defoe-code/defoe), and employing different tokenisation and named entity recognition (NER) techniques. We apply these tools to a large collection of nineteenth century [Scottish geographical](https://data.nls.uk/data/digitised-collections/gazetteers-of-scotland/) dictionaries. 
 
 This work is done in collaboration with the [Language Technology Group at Informatics](https://www.ltg.ed.ac.uk/projects/geoparsing-scottish-gazetteers/). 
 
