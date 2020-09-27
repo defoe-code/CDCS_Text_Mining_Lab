@@ -21,8 +21,8 @@ In your $HOME you need to have the following:
 * spark-2.4.0-bin-hadoop2.7 
 * bash_scripts
 * Slurm-jobs for provisioning the Spark cluster: sparkcluster_driver.slurm
-* Slurm-jobs for launching defoe queries to the Spark cluster: Round1.slurm, Round2.slurm, NlsArticles.slurm
-* Script for stopping Spark cluster (usually no needed): spark_stop.sh
+* Slurm-jobs for launching defoe queries to the Spark cluster: Round1.slurm, Round2.slurm, trade_legacy_slavery.slurm
+* Script for stopping Spark cluster (usually not needed): spark_stop.sh
 
 
 # 2. Creating a conda python3 enviroment in Cirrus
