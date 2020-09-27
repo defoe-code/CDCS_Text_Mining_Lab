@@ -13,6 +13,9 @@ Two queries are proposed:
 
 Results will be compared to be if there are any correlations of results.
 
+## Quer(ies) Parameters
+
+Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1_Requirements/Galina/Query_Inputs.md).
 
 ## Results
 
