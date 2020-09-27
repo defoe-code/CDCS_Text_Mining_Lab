@@ -191,7 +191,7 @@ For running the **defoe geoparsing queries we have not used Cirrus**, since it r
 
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
 
-We have also extended this work, to geoparse the Encyclopaedia Britannica. 
+Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. 
 
 # Extracting articles from the Encyclopaedia Britannica (EB)
 
