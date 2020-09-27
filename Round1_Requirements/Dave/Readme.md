@@ -12,6 +12,9 @@ The project will need to run queries to filter:
 
 And then run a sentiment analysis with those. 
 
+## Quer(ies) Parameters
+
+Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1_Requirements/Dave/Query_Inputs.md).
 
 ## Results 
 **Frequency results** regrding with Music genres can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Dave_OBrien)
