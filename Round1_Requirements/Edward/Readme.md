@@ -2,7 +2,7 @@
 
 ## Project Description
 
-**'Hype Curve’ common to many ‘scientific processes' **
+**'Hype Curve’ common to many ‘scientific processes'**
 
 This project proposes to run a target-frequency query, using different scientific processes (e.g. Artificial Intelligence, Cybernetics, Eugenics, DNA sequencing, Sonification) as target words.  
 
