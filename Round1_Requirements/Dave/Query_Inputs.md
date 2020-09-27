@@ -46,6 +46,6 @@
 3. Period of Time: Full
 4.	Hint count: Article count
 5.	Treatment of words: Normalize
-6.	Grouping results: By time: 
+6.	Grouping results: By time 
 
 
