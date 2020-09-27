@@ -81,9 +81,11 @@ You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Te
 #SBATCH --qos=standard
 ```
 
-# 5. Submitting defoe queries for Round 1 and Round 2.
+# 5. Submitting defoe queries for Round 1 and Round 2
 
 During this summer, we conducted a serie of studies within the [CDCS text-mining lab](https://www.cdcs.ed.ac.uk/cdcs-text-mining-lab-call-projects?utm_campaign=2619665_CDCS%20Digest%20W%2FC%2016%20March%202020&utm_medium=email&utm_source=College%20of%20Arts%2C%20Humanities%20%26%20Social%20Sciences%2C%20The%20University%20of%20Edinburgh&dm_t=0,0,0,0,0), in which we worked with humanities and social science researchers who can ask complex questions of large-scale data sets. We selected four research projects for [Round 1](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements), and two for [Round 2](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements). 
+
+A description of each research project/study can be found as follows:
 
 **Round 1**:
    - [Jannel Kwork](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Janell): DSM study - TDA newspapers
@@ -97,7 +99,7 @@ During this summer, we conducted a serie of studies within the [CDCS text-mining
    
 Each reserch project/study had a serie of defoe queries. In most of them, we first submitted a frequency query modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another query for getting the details (text) of the desired/filtered articles/pages. The requirements were collected using this [document](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Readme.md) as a baseline for formulating defoe queries.
 
-So, we created two slurm jobs, one per Round: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm). You can comment the studies that do not want to run.
+Therefore, we created two slurm jobs, one per Round: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm). You can comment the studies that do not want to run.
 
   ```
  sbatch Round_1.slurm
@@ -128,11 +130,11 @@ We have worked with the following datasets:
 - [ChapBooks](https://nlsfoundry.s3.amazonaws.com/data/nls-data-chapbooks.zip)
 - [Scottish Gazetters](https://nlsfoundry.s3.amazonaws.com/data/nls-data-gazetteersOfScotland.zip)
 
-We also had planned to work with the British Library Books (BL Books), which are stored at the UoE DataStore /sg/datastore/lib/groups/lac-store/blpaper. However, this dataset is too big for storing it in Cirrus.  
+We had also planned to work with the British Library Books (BL Books), which are stored at the UoE DataStore /sg/datastore/lib/groups/lac-store/blpaper. However, this dataset is too big for storing it in Cirrus.  
 
-### Transferring the 20th century TDA newspapers to Cirrus
+##### Transferring the 20th century TDA newspapers to Cirrus
 
-Example of how to transfer a subset of TDA newspapers - E.g. from 1900 to 2000 (20th Century). 
+Example of how to transfer a subset of TDA newspapers to Cirrus - E.g. from 1900 to 2000 (20th Century)-  using **SFTP**. 
 
 ```
 mkdir -p $HOME/TDA_GDA_1785-2009/
@@ -144,7 +146,7 @@ Changing to: /chss/datastore/chss/groups/Digital-Cultural-Heritage/LBORO/TimesDi
 
 sftp> get 19[0-9][0-9]/*/*.xml .
 ```
-### Example of how to create a data file with all XML files 
+##### Example of how to create a data file with all XML files 
 
 This data file is needed for running defoe queries against the downloaded dataset. 
 
