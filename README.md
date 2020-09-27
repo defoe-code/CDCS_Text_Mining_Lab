@@ -20,10 +20,9 @@ Cirrus do not have spark installed - so we need to install it in our $HOME direc
 In your $HOME you need to have the following:
 * spark-2.4.0-bin-hadoop2.7 
 * bash_scripts
-* Slurm-jobs for provisioning the Spark cluster: sparkcluster_driver.slurm
-* Slurm-jobs for launching defoe queries to the Spark cluster: Round1.slurm, Round2.slurm, trade_legacy_slavery.slurm
-* Script for stopping Spark cluster (usually not needed): spark_stop.sh
-
+* Slurm-jobs for provisioning the Spark cluster: [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/sparkcluster_driverslurm))
+* Slurm-jobs for launching defoe queries to the Spark cluster: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm), [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm), [trade_legacy_slavery.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm)
+* Script for stopping Spark cluster (** not needed anymore**): [spark_stop.sh](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/spark_stop.sh)
 
 # 2. Creating a conda python3 enviroment in Cirrus
 
@@ -167,7 +166,7 @@ Furthermore, we have also created several **notebooks for visualizing frequency 
 
 # Trade Legacy Slavery
 
-We also started an investigation on the slave trade and how it permeates the different volumes of the encyclopaedia Brittanica. We have a lexicon,[slavery_trade.txt](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt), that we would like to look up at:
+We also started an investigation on the slave trade and how it permeates the different volumes of the encyclopaedia Brittanica. We have a lexicon, [slavery_trade.txt](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt), that we would like to look up at:
 
 - **Page level**: returning a snippet (40 words before and after each term) every time a term is found in a page 
 - **Article level**: returning an article every time a term is foun in an article
@@ -178,7 +177,7 @@ The SLURM job to run this study can be found [here](https://github.com/defoe-cod
  
  ### Preliminary Results 
  
- - **Page level**: Text (snippet) results can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents)). Frequency results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras).
+ - **Page level**: Text (snippet) results can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). Frequency results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras).
  
  - **Article level**: Text (articles) results can be found them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). 
  
