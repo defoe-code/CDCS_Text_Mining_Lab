@@ -88,14 +88,14 @@ During this summer, we conducted a serie of studies within the [CDCS text-mining
 A description of each research project/study can be found as follows:
 
 **Round 1**:
-   - [Jannel Kwork](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Janell): DSM study - TDA newspapers
-   - [Dave O'Brien](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Dave): Music study - TDA newspapers
-   - [Edward Martin](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Edward): Science study - TDA newspapers
-   - [Galina Andreeva](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Galina): Pandemics study - TDA newspapers
+   - [Jannel Kwork](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Janell): DSM study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
+   - [Dave O'Brien](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Dave): Music study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
+   - [Edward Martin](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Edward): Science study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
+   - [Galina Andreeva](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Galina): Pandemics study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
    
  **Round 2**:
-   - [Christine Bell and Sanja Badanjak](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Christine_Sanja): Peace/War study - TDA newspapers
-   - [Sarah Van eydhoven and Lisa Gotthard](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Sarah_Lisa): Scots vs English - NLS chapbooks
+   - [Christine Bell and Sanja Badanjak](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Christine_Sanja): Peace/War study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
+   - [Sarah Van eydhoven and Lisa Gotthard](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Sarah_Lisa): Scots vs English - [NLS chapbooks](https://data.nls.uk/data/digitised-collections/chapbooks-printed-in-scotland/)
    
 Each reserch project/study had a serie of defoe queries. In most of them, we first submitted a frequency query modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another query for getting the details (text) of the desired/filtered articles/pages. The requirements were collected using this [document](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Readme.md) as a baseline for formulating defoe queries.
 
@@ -125,7 +125,7 @@ Also, you need to modify Round_[1|2].slurm files according to your needs - e.g t
 
 We have worked with the following datasets: 
 
-- Times Digital Archive (TDA): Stored at UoE DataStore /chss/datastore/chss/groups/Digital-Cultural-Heritage
+- [Times Digital Archive](https://www.gale.com/intl/c/the-times-digital-archive) (TDA): Stored at UoE DataStore /chss/datastore/chss/groups/Digital-Cultural-Heritage
 - [Encyclopaedia Britannica](https://nlsfoundry.s3.amazonaws.com/data/nls-data-encyclopaediaBritannica.zip)
 - [ChapBooks](https://nlsfoundry.s3.amazonaws.com/data/nls-data-chapbooks.zip)
 - [Scottish Gazetters](https://nlsfoundry.s3.amazonaws.com/data/nls-data-gazetteersOfScotland.zip)
