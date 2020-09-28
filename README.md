@@ -130,7 +130,27 @@ Also, you need to modify Round[1|2].slurm files according to your needs - e.g ti
 #SBATCH --qos=standard
 ```
 
-# 6. DATASETS
+# 6. Long-S fix
+
+Many historical documents used a [long-S that OCR tends to confuse as f](https://en.wikipedia.org/wiki/Long_s). For fixing this kind of OCR errors we apply the [longsfix_sentence function](https://github.com/defoe-code/defoe/blob/master/defoe/query_utils.py). More information about the long-S can be found in [this paper](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjyj5HM8ovsAhW1RxUIHWZJDZcQFjAAegQIBxAB&url=https%3A%2F%2Fwww.research.ed.ac.uk%2Fportal%2Ffiles%2F13581682%2FAlex_Glover_et_al_2012_Digitised_Historical_Text.pdf&usg=AOvVaw3RX7Oyz8j3OMUATnxDiHXr
+
+```
+def longsfix_sentence(sentence, defoe_path, os_type)
+
+```
+
+This function needs to two parameters. The operating system - *os_type* -(either linux or mac), along with the path of their defoe installation - *defoe_path*. The reason is that function (LINE 263) calls to a set of different scripts depending on the user's operationg system.
+
+Both parameteres are usually spicified in the configuration file ([example](https://github.com/defoe-code/defoe/blob/master/queries/music_including_norm.yml)), which we use to configure any query's parameters (e.g. preprocess treatment, lexicon file, etc). 
+
+The long-S fix can be tested as a single script (called long_s.py). This script is available [here](https://github.com/defoe-code/defoe/tree/master/defoe/long_s_fix). For running it you just need to do the following (after changing the defoe_path and os_type variables according to your needs).
+
+```
+cd $HOME/defoe/defoe/long_s_fix/
+python long_s.py
+```
+
+# 7. DATASETS
 
 We have worked with the following datasets: 
 
