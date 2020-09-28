@@ -25,11 +25,16 @@ Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/
 
 Times Digital Archive (TDA)
 
-# Defoe model 
+## Defoe model 
 
 [Papers](https://github.com/defoe-code/defoe/tree/master/defoe/papers)
 
-# Defoe queries
+## Defoe queries
+
+- [Frequency query with target words](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year.py)
+- [Selected articles text query along with articles' metadata](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year_details.py)
+
+## Defoe Job submission queries
 
 They are avaible inside [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm)
 
