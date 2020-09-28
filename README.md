@@ -3,7 +3,7 @@ For running defoe queries in [Cirrus](https://cirrus.readthedocs.io/en/master/),
 
 We have divided the work performed in the **CDCS TDM Lab** in two Rounds: **Round 1** and **Round 2**. Each Round has a different set of studies, and each study have a set of defoe queries. In parallel, we have started other studies, such as **Geoparsing the Scottish Gazetteers** and **Trade Legacy Slavery**. Details of those can be found in this document.  
 
-For understanding better how [defoe](https://github.com/defoe-code/defoe) works, we recommend to read first [this](https://ieeexplore.ieee.org/document/9041813) paper, along with checking its [documentation](https://github.com/defoe-code/defoe/blob/master/docs/run-queries.md). Some **presentations** about **defoe** are also available [here](https://github.com/defoe-code/defoe/tree/master/docs/presentations). 
+For understanding better how [defoe](https://github.com/defoe-code/defoe) works, we recommend to read first [this](https://ieeexplore.ieee.org/document/9041813) paper, along with checking its [documentation](https://github.com/defoe-code/defoe/blob/master/docs/run-queries.md). Some **presentations** about **defoe** are also available [here](https://github.com/defoe-code/defoe/tree/master/docs/presentations). The last presentation introducing defoe was done for the **Research Libraries UK (RLUK) Text and Data Mining Seminar**, available [here](https://github.com/defoe-code/defoe/blob/master/docs/presentations/RLUK-DEFOE.pdf). 
 
 But first, we have a summary of the **instructions needed to replicate this work**. 
 
