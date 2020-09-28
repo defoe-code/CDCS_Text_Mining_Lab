@@ -209,7 +209,7 @@ For running the **defoe geoparsing queries we have not used Cirrus**, since it r
 
 We have **two defoe geoparser queries**:
  - [Applying the original geoparser](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/geoparser_pages.py)
- - [Applying spacy and the georesolve][https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/georesolution_pages.py]
+ - [Applying spacy and the georesolve](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/georesolution_pages.py)
 
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
 
