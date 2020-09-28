@@ -71,7 +71,7 @@ sbatch sparkcluster_driver.slurm
 
 You will need to **wait until the job is running before proceding to run defoe queries**.  
 
-You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/sparkcluster_driver.slurm) according to your need. For example, for chaning the amount of time, number of nodes, and account. The current script configures a **Spark cluster of 324 cores**. 
+You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/sparkcluster_driver.slurm) according to your need. For example, for chaning the amount of time, number of nodes, and account. The current script configures a **Spark cluster of 324 cores** (9 nodes *X* 36 cores per node). 
 
 ```
 #SBATCH --job-name=SPARKCLUSTER
