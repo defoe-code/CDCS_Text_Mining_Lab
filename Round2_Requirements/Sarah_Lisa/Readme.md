@@ -15,6 +15,18 @@ Since the 16th century, Scots has been increasingly influenced by English, and p
 
 Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Sarah_Lisa/Query_Inputs.md).
 
+## Dataset used
+
+[ChapBooks](https://data.nls.uk/data/digitised-collections/chapbooks-printed-in-scotland/)
+
+# Defoe model 
+
+[nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls)
+
+# Defoe queries
+
+They are avaible inside [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm)
+
 
 ## Results
 **Frequency results** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_2/Lisa_Sarah).
