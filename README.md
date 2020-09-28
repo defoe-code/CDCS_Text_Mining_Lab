@@ -188,8 +188,8 @@ The SLURM job to run this study can be found [here](https://github.com/defoe-cod
 
 ### Defoe queries
 
- - **Page level**: All queries used for doing this work can be found under [nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls) defoe model. 
- - **Article level**: All queries used for doing this work can be found under [nlsArticles](https://github.com/defoe-code/defoe/tree/master/defoe/nlsArticles) and [hdfs](https://github.com/defoe-code/defoe/tree/master/defoe/hdfs) defoe models.
+ - **Page level**: The query used for doing this work can be found under [nls](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/window_keysearch_concordance_by_date.py) defoe model. 
+ - **Article level**: All queries used for doing this work can be found under [nlsArticles](https://github.com/defoe-code/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_hdfs.py) and [hdfs](https://github.com/defoe-code/defoe/blob/master/defoe/hdfs/queries/keysearch_articles_by_year_details.py) defoe models.
 
  
  ### Preliminary Results 
@@ -205,17 +205,19 @@ Furthermore, we have continued our work on devising automatic and parallel metho
 
 This work is being conducted in collaboration with the [Language Technology Group at Informatics](https://www.ltg.ed.ac.uk/projects/geoparsing-scottish-gazetteers/). 
 
-For running the **defoe geoparsing queries we have not used Cirrus**, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, **we have used a VM** for this. **Instructions of how we have set up this VM** with defoe, the Edinburgh geoparser and Spark can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md), along with examples of how to run defoe geoparser queries using different configurations.  
+For running the **defoe geoparsing queries we have not used Cirrus**, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, **we have used a VM** for this. **Instructions of how we have set up this VM** with defoe, the Edinburgh geoparser and Spark can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md), along with examples of how to run defoe geoparser queries using different configurations.
+
+We have **two defoe geoparser queries**:
+ - [Applying the Original Geoparser](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/geoparser_pages.py)
+ - [Applying Spacy + Georesolve][https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/georesolution_pages.py]
 
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
 
 Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. 
 
-Defoe geoparser queries can be found under [nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls) defoe model. 
-
 # Extracting automatically articles from the Encyclopaedia Britannica (EB)
 
-Finally, we have created a new defoe query for extracting automatically articles from the EB. The results are stored per edition (and also we have them in a single file), in CSV files. Each CSV file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
+Finally, we have created a [new defoe query for extracting automatically articles](https://github.com/defoe-code/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_hdfs.py) from the EB. The results are stored per edition (and also we have them in a single file), in CSV files. Each CSV file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
  
  - title: title of the book (e.g. Encyclopaedia Britannica)
  - edition: edition of the book (e.g Eighth edition, Volume 2, A-Anatomy)
@@ -262,5 +264,5 @@ Those files (one per edition, and also one with all articles) can be downloaded 
 913M 24 Aug 11:48 eb_all_editions_total_articles.csv -- It has all articles for all editions!
   ```
   
-In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files. These queries use the [nlsArticles](https://github.com/defoe-code/defoe/tree/master/defoe/nlsArticles) defoe model. 
+In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files. 
 
