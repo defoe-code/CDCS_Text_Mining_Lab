@@ -208,8 +208,8 @@ This work is being conducted in collaboration with the [Language Technology Grou
 For running the **defoe geoparsing queries we have not used Cirrus**, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, **we have used a VM** for this. **Instructions of how we have set up this VM** with defoe, the Edinburgh geoparser and Spark can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md), along with examples of how to run defoe geoparser queries using different configurations.
 
 We have **two defoe geoparser queries**:
- - [Applying the Original Geoparser](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/geoparser_pages.py)
- - [Applying Spacy + Georesolve][https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/georesolution_pages.py]
+ - [Applying the original geoparser](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/geoparser_pages.py)
+ - [Applying spacy and the georesolve][https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/georesolution_pages.py]
 
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
 
