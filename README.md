@@ -193,7 +193,7 @@ For running the **defoe geoparsing queries we have not used Cirrus**, since it r
 
 Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. 
 
-# Extracting automatically the articles from the Encyclopaedia Britannica (EB)
+# Extracting automatically articles from the Encyclopaedia Britannica (EB)
 
 Finally, we have created a new defoe query for extracting automatically articles from the EB. The results are stored per edition (and also we have them in a single file), in CSV files. Each CSV file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
  
