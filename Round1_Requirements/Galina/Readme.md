@@ -21,7 +21,7 @@ Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/
 
 Times Digital Archive (TDA)
 
-# Defoe model 
+## Defoe model 
 
 [Papers](https://github.com/defoe-code/defoe/tree/master/defoe/papers)
 
