@@ -14,6 +14,18 @@ Results group by time and also by specialist and non-specialist literature.
 
 Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1_Requirements/Edward/Query_Inputs.md).
 
+## Dataset used
+
+Times Digital Archive (TDA)
+
+# Defoe model 
+
+[Papers](https://github.com/defoe-code/defoe/tree/master/defoe/papers)
+
+# Defoe queries
+
+They are avaible inside [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm)
+
 ## Results
 
 **Frequency results** using different preprocessing treatments (*lemmatized*, *normalized*) can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Edward_Martin)
