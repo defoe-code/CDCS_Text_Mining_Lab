@@ -110,7 +110,9 @@ Therefore, we created **two slurm jobs**, one per Round: [Round1.slurm](https://
    ```
 Note, that for running Round[1|2].slurm jobs, you need to have first running the **sparkcluster_driver.slurm** job. 
 
-Also, you need to modify Round[1|2].slurm files according to your needs - e.g time, account, job name. But you will only need to **reserve 1 node** (36 cores) for submitting defoe queries - **do not** use more than 1 NODE for running the defoe queries.
+Also, you need to modify Round[1|2].slurm files according to your needs - e.g time, account, job name. But you will only need to **reserve 1 node** (36 cores) for submitting defoe queries.
+
+**Important:** **Do not use more than 1 NODE** for submitting defoe queries to the Spark Cluster. The parallelization of defoe relays on the number of cores that the Spark cluster has been configured (inside sparkcluster_driver.slurm - in this case 324 cores ), and not in the number of nodes used for submitting defoe queries to the Spark cluster. 
 
 ```
 #!/bin/bash
