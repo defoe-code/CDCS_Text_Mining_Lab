@@ -141,7 +141,7 @@ def longsfix_sentence(sentence, defoe_path, os_type)
 
 This function needs to two parameters. The operating system - *os_type* -(either linux or mac), along with the path of their defoe installation - *defoe_path*. The reason is that function (LINE 263) calls to a set of different scripts depending on the user's operationg system.
 
-Both parameteres are usually spicified in the configuration file ([example](https://github.com/defoe-code/defoe/blob/master/queries/music_including_norm.yml)), which we use to configure any query's parameters (e.g. preprocess treatment, lexicon file, etc). 
+Both parameteres are usually spicified in the configuration file ([example](https://github.com/defoe-code/defoe/blob/master/queries/music_including_norm.yml)) used to configure any query's parameters (e.g. preprocess treatment, lexicon file, etc). 
 
 The long-S fix can be tested as a single script (called long_s.py). This script is available [here](https://github.com/defoe-code/defoe/tree/master/defoe/long_s_fix). For running it you just need to do the following (after changing the defoe_path and os_type variables according to your needs).
 
