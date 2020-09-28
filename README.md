@@ -209,7 +209,7 @@ At **page level** we also run the frequency query using the same lexicon.
  - **Article level**: All queries used for doing this work can be found under [nlsArticles](https://github.com/defoe-code/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_hdfs.py) and [hdfs](https://github.com/defoe-code/defoe/blob/master/defoe/hdfs/queries/keysearch_articles_by_year_details.py) defoe models.
  
 
-### Defoe queries configuration files
+### Defoe queries configuration file
 
 - [slavery.yml](https://github.com/defoe-code/defoe/blob/master/queries/slavery.yml)
 
@@ -238,7 +238,7 @@ We have **two defoe geoparser queries**:
  
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
 
-Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. Therefore, we have 4 configuration files:
+Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. Therefore, we have **four configuration files**:
 - [Scottish Gazetteer + Original Geoparser](https://github.com/defoe-code/defoe/blob/master/queries/geoparser_sg.yml)
 - [Encyclopaedia Britannica + Original Geoparser](https://github.com/defoe-code/defoe/blob/master/queries/geoparser_eb.yml)
 - [Scottish Gazetteer + Spacy + Georesolve](https://github.com/defoe-code/defoe/blob/master/queries/georesolve_sg.yml)
