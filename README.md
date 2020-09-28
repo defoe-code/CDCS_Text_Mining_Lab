@@ -174,13 +174,21 @@ We also started an investigation on the slave trade and how it permeates the dif
 
 At **page level** we also run the frequency query using the same lexicon. 
 
+### Slurm job
+
 The SLURM job to run this study can be found [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm). 
+
+### Defoe queries
+
+ - **Page level**: All queries used for doing this work can be found under [nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls) defoe model. 
+ - **Article level**: All queries used for doing this work can be found under [nlsArticles](https://github.com/defoe-code/defoe/tree/master/defoe/nlsArticles) and [hdfs](https://github.com/defoe-code/defoe/tree/master/defoe/hdfs) defoe models.
+
  
  ### Preliminary Results 
  
- - **Page level**: Text (snippet) results can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). Frequency results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras). Those queries can be found under [nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls) defoe model. 
+ - **Page level**: Text (snippet) results can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). Frequency results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras). 
  
- - **Article level**: Text (articles) results can be found them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). hose queries can be found under [nlsArticles](https://github.com/defoe-code/defoe/tree/master/defoe/nlsArtciles) and [hdfs](https://github.com/defoe-code/defoe/tree/master/defoe/hdfs) defoe model. 
+ - **Article level**: Text (articles) results can be found them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents).  
  
 
 # Geoparsing the Scottish Gazetteers
