@@ -31,6 +31,11 @@ Times Digital Archive (TDA)
 - [Frequency query with target words](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year.py)
 - [Selected articles text query along with articles' metadata](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year_details.py)
 
+## Defoe queries configuration files
+
+- [music_excluding_norm.yml](https://github.com/defoe-code/defoe/tree/master/queries/music_excluding_norm.yml)
+- [music_including_norm.yml](https://github.com/defoe-code/defoe/tree/master/queries/music_including_norm.yml)
+- [music_norm.yml](https://github.com/defoe-code/defoe/tree/master/queries/music_norm.yml)
 
 ## Defoe Job submission queries
 
