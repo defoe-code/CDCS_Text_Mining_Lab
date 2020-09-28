@@ -20,7 +20,7 @@ As follows, we have a summary of the **instructions needed to replicate this wor
 
 In your $HOME you need to have the following:
 * spark-2.4.0-bin-hadoop2.7 
-* bash_scripts
+* [bash_scripts](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/bash_scripts)
 * Slurm-jobs for provisioning the Spark cluster: [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/sparkcluster_driverslurm)
 * Slurm-jobs for launching defoe queries to the Spark cluster: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm), [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm), [trade_legacy_slavery.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm)
 * Script for stopping Spark cluster (** not needed anymore**): [spark_stop.sh](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/spark_stop.sh)
@@ -48,7 +48,7 @@ source deactivate
 
 # 3. Installing defoe in Cirrus (inside the conda enviroment)
 
-To install defoe in Cirrus, do:
+To install **defoe in Cirrus HPC cluster**, do:
 
 ```
 git clone https://github.com/defoe-code/defoe.git
