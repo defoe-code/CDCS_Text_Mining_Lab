@@ -211,24 +211,24 @@ Defoe geoparser queries can be found under [nls](https://github.com/defoe-code/d
 
 Finally, we have created a new defoe query for extracting automatically articles from the EB. The results are stored per edition (and also we have them in a single file), in CSV files. Each CSV file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
  
- - title: Title of the book (e.g. Encyclopaedia Britannica)
- - edition: Edition of the book (e.g Eighth edition, Volume 2, A-Anatomy)
- - year: Year of publication/edition (e.g. 1853)
- - place: Place (e.g. Edinburgh)      
- - archive_filename: Directory Path of the book (e.g. /home/rosa_filgueira_vicente/datasets/single_EB/193322698/)     
- - source_text_filename: Directory Path of the page (e.g. alto/193403113.34.xml)
- - text_unit: Unit that represent each ALTO XML. These could be Page or Issue. 
- - text_unit_id: Id of the page (e.g. Page704)
- - num_text_unit: Number of pages (e.g. 904)
- - type_archive: Type of archive. Thse could be book or newspapers. 
+ - title: title of the book (e.g. Encyclopaedia Britannica)
+ - edition: edition of the book (e.g Eighth edition, Volume 2, A-Anatomy)
+ - year: year of publication/edition (e.g. 1853)
+ - place: place (e.g. Edinburgh)      
+ - archive_filename: directory path of the book (e.g. /home/rosa_filgueira_vicente/datasets/single_EB/193322698/)     
+ - source_text_filename: directory Path of the page (e.g. alto/193403113.34.xml)
+ - text_unit: unit that represent each ALTO XML. These could be Page or Issue. 
+ - text_unit_id: id of the page (e.g. Page704)
+ - num_text_unit: number of pages (e.g. 904)
+ - type_archive: type of archive. Thse could be book or newspapers. 
  - model: defoe model used for ingesting this dataset (nlsArticles)
- - type_page: The page classification that has been done by defoe. These could be Topic, Articles, Mix or Full Page. 
- - header: The header of the page (e.g. AMERICA)
- - **term**: Term that is going to be described (e.g. AMERICA)
- - **definition**: Words describing an article / topic/ full page: ( e.g. “AMERICA. being inhabited. The Aleutian ….”)
- - num_articles: Number of articles per page. In case a page has been classified as Topic or FullPage, the number of articles is 1.
- - num_page_words: Number of words per page (e.g. 1373)
- - num_article_words: Number of words of an article (e.g. 1362)
+ - type_page: the page classification that has been done by defoe. These could be Topic, Articles, Mix or Full Page. 
+ - header: the header of the page (e.g. AMERICA)
+ - **term**: term that is going to be described (e.g. AMERICA)
+ - **definition**: words describing an article / topic/ full page: ( e.g. “AMERICA. being inhabited. The Aleutian ….”)
+ - num_articles: number of articles per page. In case a page has been classified as Topic or FullPage, the number of articles is 1.
+ - num_page_words: number of words per page (e.g. 1373)
+ - num_article_words: number of words of an article (e.g. 1362)
  
 We have detected two types of articles with two different patterns at “page” level:
   - *Short articles* (named as **articles**): Usually presented by a TERM in the main text in uppercase,  followed by a “,”  (e.g. ALARM, ) and then a DESCRIPTION of the TERM (similar to an entry in a dictionary). This description normally is one or two paragraphs, but of course there are exceptions.  	
