@@ -19,9 +19,9 @@ export SPARK_MASTER_HOST=$HOSTNAME
 export SPARK_MASTER_PORT=7077
 export SPARK_MASTER_WEBUI_PORT=8080
 export PATH=$SPARK_HOME/sbin:$SPARK_HOME/bin:$PATH
-export HADOOP_HOME=$HOME/HADOOP/hadoop-2.9.2
-export HADOOP_CONF_DIR=$HOME/HADOOP/conf_dir
-export PATH=$PATH:$HADOOP_HOME/bin
+#export HADOOP_HOME=$HOME/HADOOP/hadoop-2.9.2
+#export HADOOP_CONF_DIR=$HOME/HADOOP/conf_dir
+#export PATH=$PATH:$HADOOP_HOME/bin
 
 cd $HOME/bash_scripts
 rm -f master.log
@@ -29,7 +29,6 @@ rm -f driver.log
 rm -f worker.log
 rm -f slaves.log
 rm -f nodes_list.log
-
 
 echo "HOSTNAME is" $HOSTNAME
 
