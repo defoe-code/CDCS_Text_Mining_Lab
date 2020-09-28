@@ -3,7 +3,7 @@
 1.	Target words: None 
 2.	Lexicon: British Museum, National Theatre
 3.	Period of Time : Full 
-4.	Hint count: Article count: 
+4.	Hint count: Article count 
 5.	Treatment of words : Normalize
 6.	Grouping results: By Time
 
@@ -12,7 +12,7 @@
 1.	Target words: Music 
 2.	Lexicon: British Museum, National Theatre
 3.	Period of Time: Full 
-4.	Hint count: Article count: 
+4.	Hint count: Article count 
 5.	Treatment of words: Normalize
 6.	Grouping results: By Time
 
