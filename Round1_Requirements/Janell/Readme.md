@@ -34,6 +34,13 @@ Times Digital Archive (TDA)
 - [Frequency query with target words](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year.py)
 - [Selected articles text query along with articles' metadata](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year_details.py)
 
+## Defoe queries configuration files
+
+- [dsm_explicit_lema.yml](https://github.com/defoe-code/defoe/blob/master/queries/dsm_explicit_lema.yml)
+- [dsm_implicit_lema.yml](https://github.com/defoe-code/defoe/blob/master/queries/dsm_implicit_lema.yml)
+- [dsm_neutral_lema.yml](https://github.com/defoe-code/defoe/blob/master/queries/dsm_neutral_lema.yml)
+
+
 ## Defoe Job submission queries
 
 They are avaible inside [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm)
