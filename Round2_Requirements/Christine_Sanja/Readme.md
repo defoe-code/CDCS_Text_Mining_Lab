@@ -11,10 +11,10 @@ Until 1990 there was little formalised practice of signing peace agreements betw
 
 Therefore, we want to use defoe to look at the TDA newspapers and identify how the terms ‘ceasefire’, ‘peace agreements’ or ‘peace settlement’ appear in text over the entire 1785-2014 period. This would include things like:
 - Frequency over time
-- Most commonly used adjacent words [not covered during the project]
+- Most commonly used adjacent words [*not covered during the project*]
 - Creating a corpus of only those articles that use the relevant terms, and then running topic models on them
-- Using the results of the topic models to compare to historical conflict data or historical political data (like the historical V-Dem, which goes back to about the same time, in the late 1700s). [not covered during the project]
-- Running a geoparser to identify locations which are mentioned in relation to peace. [not covered during the project]
+- Using the results of the topic models to compare to historical conflict data or historical political data (like the historical V-Dem, which goes back to about the same time, in the late 1700s). [*not covered during the project*]
+- Running a geoparser to identify locations which are mentioned in relation to peace. [*not covered during the project*]
 
 
 ## Quer(ies) Parameters
