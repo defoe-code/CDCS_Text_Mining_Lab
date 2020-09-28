@@ -168,7 +168,7 @@ Furthermore, we have also created several **notebooks for visualizing frequency 
 We also started an investigation on the slave trade and how it permeates the different volumes of the [Encyclopaedia Brittanica](https://data.nls.uk/data/digitised-collections/encyclopaedia-britannica/) (EB). We have a lexicon, [slavery_trade.txt](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt), that we looked up at two levels:
 
 - **Page level**: returning a snippet (40 words before and after each term) every time a term from the lexicon is found *in a page*.
-- **Article level**: returning an article every time a term from the lexicon is foun *in an article*. For doing this, **we need first to extract the articles per EB page**, and store them in CSV files (one per edition). See more [bellow](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/README.md#extracting-articles-from-encyclopaedia-britannica-eb). Once extracted the articles per page, then we can use anohter defoe to filter those by the lexicon.  
+- **Article level**: returning an article every time a term from the lexicon is foun *in an article*. For doing this, **we need first to extract all the articles per EB page**, and store them in CSV files (one per edition). See more information about extracting articles [bellow](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/README.md#extracting-automatically-articles-from-the-encyclopaedia-britannica-eb). Once extracted the articles per page, then we can use anohter defoe to filter those by the lexicon.  
 
 At **page level** we also run the frequency query using the same lexicon. 
 
