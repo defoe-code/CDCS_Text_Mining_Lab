@@ -3,6 +3,8 @@ For running defoe queries in [Cirrus](https://cirrus.readthedocs.io/en/master/),
 
 We have divided the work performed in the **CDCS TDM Lab** in two Rounds: **Round 1** and **Round 2**. Each Round has a different set of studies, and each study have a set of defoe queries. In parallel, we have started other studies, such as **Geoparsing the Scottish Gazetteers** and **Trade Legacy Slavery**. Details of those can be found in this document.  
 
+For understanding better how [defoe](https://github.com/defoe-code/defoe) works, we recommend to read first [this](https://ieeexplore.ieee.org/document/9041813) paper, along with checking its [documentation](https://github.com/defoe-code/defoe/blob/master/docs/run-queries.md). Some **presentations** about **defoe** are also available [here](https://github.com/defoe-code/defoe/tree/master/docs/presentations). 
+
 But first, we have a summary of the **instructions needed to replicate this work**. 
 
 # 1. Spark installation steps
@@ -176,9 +178,9 @@ The SLURM job to run this study can be found [here](https://github.com/defoe-cod
  
  ### Preliminary Results 
  
- - **Page level**: Text (snippet) results can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). Frequency results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras).
+ - **Page level**: Text (snippet) results can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). Frequency results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras). Those queries can be found under [nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls) defoe model. 
  
- - **Article level**: Text (articles) results can be found them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). 
+ - **Article level**: Text (articles) results can be found them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). hose queries can be found under [nlsArticles](https://github.com/defoe-code/defoe/tree/master/defoe/nlsArtciles) and [hdfs](https://github.com/defoe-code/defoe/tree/master/defoe/hdfs) defoe model. 
  
 
 # Geoparsing the Scottish Gazetteers
@@ -192,6 +194,8 @@ For running the **defoe geoparsing queries we have not used Cirrus**, since it r
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
 
 Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. 
+
+The defoe geoparser queries can be found under [nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls) defoe model. 
 
 # Extracting automatically articles from the Encyclopaedia Britannica (EB)
 
@@ -242,5 +246,5 @@ Those files (one per edition, and also one with all articles) can be downloaded 
 913M 24 Aug 11:48 eb_all_editions_total_articles.csv -- It has all articles for all editions!
   ```
   
-In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files.  
+In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files.  Notice that these queries use the [nlsArticles](https://github.com/defoe-code/defoe/tree/master/defoe/nlsArticles) defoe model. 
 
