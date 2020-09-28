@@ -33,7 +33,7 @@ NUMCORES=$( expr 32 '*' "$NUMWORKERS")
 echo "Number of cores fpr this query is" $NUMCORES
 cd $HOME/defoe
 
-############### SCOTS vs ENGLISH - ChapBooks ############################
+############### SCOTS vs ENGLISH Study ############################
 
 #### DETAILS: Using two lexicons
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py chapbooks_data.txt nls defoe.nls.queries.window_keysearch_concordance_by_date queries/english.yml -r details_english_by_year.txt -n $NUMCORES > log_details_english
@@ -59,7 +59,7 @@ $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py chapbooks_data.txt nls defoe.nls.queries.keysearch_by_year_term_count queries/english.yml -r frequency_english_per_year_count_term -n $NUMCORES > log_chapbooks_english_term
 
-############# PEACE / WAR - TDA ############################
+############# PEACE / WAR Study ############################
 
 ### FREQUENCY QUERY
 
