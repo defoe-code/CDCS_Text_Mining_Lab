@@ -254,5 +254,5 @@ Those files (one per edition, and also one with all articles) can be downloaded 
 913M 24 Aug 11:48 eb_all_editions_total_articles.csv -- It has all articles for all editions!
   ```
   
-In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files.  Notice that these queries use the [nlsArticles](https://github.com/defoe-code/defoe/tree/master/defoe/nlsArticles) defoe model. 
+In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files. These queries use the [nlsArticles](https://github.com/defoe-code/defoe/tree/master/defoe/nlsArticles) defoe model. 
 
