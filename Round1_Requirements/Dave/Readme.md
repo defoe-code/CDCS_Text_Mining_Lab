@@ -8,9 +8,9 @@ How have arts and culture been reported? what counts as quality? how have cultur
 
 The project will need to run queries to filter:
 - Articles/text regarding with Music genres
-- Articles/text regardin with British Museum 
+- Articles/text regarding with British Museum 
 
-And then run a sentiment analysis with those. 
+And then run a sentiment analysis with those (outside defoe). 
 
 ## Quer(ies) Parameters
 
