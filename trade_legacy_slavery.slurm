@@ -31,7 +31,7 @@ export SPARK_HOME=${HOME}/spark-2.4.0-bin-hadoop2.7
 
 NUM=$(wc -l $HOME/bash_scripts/worker.log)
 NUMWORKERS=$(echo $NUM| cut -d' ' -f1)
-NUMCORES=$( expr 32 '*' "$NUMWORKERS")
+NUMCORES=$( expr 36 '*' "$NUMWORKERS")
 
 
 echo "Number of cores for this query is" $NUMCORES
