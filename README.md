@@ -186,7 +186,7 @@ The SLURM job to run this study can be found [here](https://github.com/defoe-cod
  
  ### Preliminary Results 
  
- - **Page level**: Text (snippet) results can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). Frequency results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras). 
+ - **Page level**: Text (snippets) results can be found [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegacy%5Fslavery%5Fnls%5Fresults%5Fwindow%5F40%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents). Frequency results can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Melissa_Terras). 
  
  - **Article level**: Text (articles) results can be found them [here](https://uoe.sharepoint.com/sites/DEFOE_Results/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents%2Ftrade%5Flegay%5Fslavery%5Feb%5Fper%5Farticle%2Etar&parent=%2Fsites%2FDEFOE%5FResults%2FShared%20Documents).  
  
@@ -203,7 +203,7 @@ For running the **defoe geoparsing queries we have not used Cirrus**, since it r
 
 Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. 
 
-The defoe geoparser queries can be found under [nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls) defoe model. 
+Defoe geoparser queries can be found under [nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls) defoe model. 
 
 # Extracting automatically articles from the Encyclopaedia Britannica (EB)
 
