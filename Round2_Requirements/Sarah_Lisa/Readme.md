@@ -19,14 +19,19 @@ Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/
 
 [ChapBooks](https://data.nls.uk/data/digitised-collections/chapbooks-printed-in-scotland/)
 
-# Defoe model 
+## Defoe model 
 
 [nls](https://github.com/defoe-code/defoe/tree/master/defoe/nls)
 
-# Defoe queries
+## Defoe queries
+
+- [Frequency query with target words group results by page](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/keysearch_by_year_page_count.py)
+- [Frequency query with target words group results by term](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/keysearch_by_year_term_count.py)
+- [Selected pages text query along with articles' metadata](hhttps://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/window_keysearch_concordance_by_date.py)
+
+## Defoe Job submission queries
 
 They are avaible inside [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm)
-
 
 ## Results
 **Frequency results** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_2/Lisa_Sarah).
