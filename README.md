@@ -55,11 +55,10 @@ git clone https://github.com/defoe-code/defoe.git
 source activate cirrus-py36
 cd defoe
 ./requirements.sh
-python
->> import nltk
-   nltk.download('wordnet')
-bash scripts/download_ntlk_corpus.sh
+zip -r defoe.zip defoe
 ```
+
+**Note**: Every time you change something inside defoe library, you need to ZIP the DEFOE code. If you dont change nothing, you dont need to zip it again.
 
 # 4. Starting Spark Cluster in Cirrus
 
