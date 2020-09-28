@@ -8,14 +8,14 @@
 
 
 [Not covered by the current defoe query]
-Genetic knowledge […] social engineering
-Control […] natural selection
-Prevent […] reproducing
-Scientific management […] mating
-Fit […] reproduce
-Unfit […] reproduce
-Improvement […] race
-Improvement […] stock
+- Genetic knowledge […] social engineering
+- Control […] natural selection
+- Prevent […] reproducing
+- Scientific management […] mating
+- Fit […] reproduce
+- Unfit […] reproduce
+- Improvement […] race
+- Improvement […] stock
 
 3.	Time: Everything in Times Digital Archive 1700-present
 4.	Count: once per article
