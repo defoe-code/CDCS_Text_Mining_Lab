@@ -103,16 +103,20 @@ A description of each research project/study can be found as follows:
    
 Each reserch project/study has a serie of defoe queries. In most of them, we first submitted a *frequency query* modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another *query for getting the details (text)* of the desired/filtered articles/pages. The **requirements** were collected using this [document](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Readme.md) as a **baseline for formulating defoe queries**.
 
-Therefore, we created **two slurm jobs**, one per Round: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm). You can comment the studies that do not want to run. For running all the studies (with all defoe queries) included in **Round 1** type the following command: 
+Later we created **two slurm jobs**, one per Round ([Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm)), for running all defoe queries in Cirrus. You can comment the studies that do not want to run. For running all the studies (with all defoe queries) included in **Round 1**, type the following command: 
 
   ```
  sbatch Round1.slurm
    ```
+Similarly, for running all the studies (with all defoe queries) included in **Round 2**,  type the following command: 
+
+  ```
+ sbatch Round2.slurm
+   ```
+
 Note, that for running Round[1|2].slurm jobs, you need to have first running the **sparkcluster_driver.slurm** job. 
 
-Also, you need to modify Round[1|2].slurm files according to your needs - e.g time, account, job name. But you will only need to **reserve 1 node** (36 cores) for submitting defoe queries.
-
-**Important:** **Do not use more than 1 NODE** for submitting defoe queries to the Spark Cluster. The parallelization of defoe relays on the number of cores that the Spark cluster has been configured (inside sparkcluster_driver.slurm - in this case with 324 cores), and not in the number of nodes used for submitting defoe queries to the Spark cluster. 
+Also, you need to modify Round[1|2].slurm files according to your needs - e.g time, account, job name. But you will only need to **reserve 1 node** (36 cores) for submitting defoe queries to the Spark cluster. The parallelization of defoe relays on the number of nodes that the Spark cluster has been configured with (inside sparkcluster_driver.slurm - in this case with 9 nodes), and not in the number of nodes used for submitting defoe queries to the Spark cluster. 
 
 ```
 #!/bin/bash
