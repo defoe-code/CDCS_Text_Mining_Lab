@@ -21,6 +21,18 @@ Therefore, we want to use defoe to look at the TDA newspapers and identify how t
 
 Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Christine_Sanja/Query_Inputs.md).
 
+## Dataset used
+
+Times Digital Archive (TDA)
+
+# Defoe model 
+
+[Papers](https://github.com/defoe-code/defoe/tree/master/defoe/papers)
+
+# Defoe queries
+
+They are avaible inside [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm)
+
  
 ## Results 
 
