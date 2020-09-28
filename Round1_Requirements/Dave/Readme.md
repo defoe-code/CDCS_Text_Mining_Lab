@@ -12,9 +12,22 @@ The project will need to run queries to filter:
 
 And then run a sentiment analysis with those (outside defoe). 
 
+
 ## Quer(ies) Parameters
 
 Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1_Requirements/Dave/Query_Inputs.md).
+
+## Dataset used
+
+Times Digital Archive (TDA)
+
+# Defoe model 
+
+[Papers](https://github.com/defoe-code/defoe/tree/master/defoe/papers)
+
+# Defoe queries
+
+They are avaible inside [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm)
 
 ## Results 
 **Frequency results** regrding with Music genres can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Dave_OBrien)
