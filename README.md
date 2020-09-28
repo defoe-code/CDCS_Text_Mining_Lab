@@ -182,15 +182,14 @@ We also started an investigation on the slave trade and how it permeates the dif
 
 At **page level** we also run the frequency query using the same lexicon. 
 
-### Slurm job
-
-The SLURM job to run this study can be found [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm). 
-
 ### Defoe queries
 
  - **Page level**: The query used for doing this work can be found under [nls](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/window_keysearch_concordance_by_date.py) defoe model. 
  - **Article level**: All queries used for doing this work can be found under [nlsArticles](https://github.com/defoe-code/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_hdfs.py) and [hdfs](https://github.com/defoe-code/defoe/blob/master/defoe/hdfs/queries/keysearch_articles_by_year_details.py) defoe models.
 
+### Slurm job
+
+The SLURM job to run this study can be found [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm). 
  
  ### Preliminary Results 
  
@@ -217,7 +216,11 @@ Recently, we have also extended this work to geoparse automatically the Encyclop
 
 # Extracting automatically articles from the Encyclopaedia Britannica (EB)
 
-Finally, we have created a [new defoe query for extracting automatically articles](https://github.com/defoe-code/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_hdfs.py) from the EB. The results are stored per edition (and also we have them in a single file), in CSV files. Each CSV file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
+Finally, we have created a [new defoe query for extracting automatically articles](https://github.com/defoe-code/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_hdfs.py) from the EB. The articles are stored per edition (and also we have them in a single file), in CSV files. 
+
+### Articles metadata
+
+Each CSV file has a row per article found within a page, with the following columns (being the most important **term** and **definition**):
  
  - title: title of the book (e.g. Encyclopaedia Britannica)
  - edition: edition of the book (e.g Eighth edition, Volume 2, A-Anatomy)
@@ -247,6 +250,8 @@ We have detected two types of articles with two different patterns at “page”
  
 Important: **Topic** is just the way we named the *long articles* that expands more than a page. It does not refer to “NLP topic”.
 
+### Downloading EB articles datasets
+
 Those files (one per edition, and also one with all articles) can be downloaded from [here](https://drive.google.com/file/d/1cZ5-OGw2uRkkrNEGet_ydZr7SdnLKEWn/view?usp=sharing). Once you decompressed the *eb_articles_per_page.tar* file, you will find these:
 
   ```
@@ -263,6 +268,7 @@ Those files (one per edition, and also one with all articles) can be downloaded 
 70M 24 Aug 11:12 eb_4_5_6_suplement_total_articles.csv
 913M 24 Aug 11:48 eb_all_editions_total_articles.csv -- It has all articles for all editions!
   ```
-  
+### Slurm job
+
 In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files. 
 
