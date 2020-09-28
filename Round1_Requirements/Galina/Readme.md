@@ -30,6 +30,18 @@ Times Digital Archive (TDA)
 - [Frequency query with target words filtered by date](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year_filter_date.py)
 - [Selected articles text filtered by date query along with articles' metadata](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year_filter_date_details.py)
 
+## Defoe queries configuration files
+
+- [pandemics_norm_num_q1.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q1.yml)
+- [pandemics_norm_num_q2.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q2.yml)
+- [pandemics_norm_num_q3.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q3.yml)
+- [pandemics_norm_num_q4.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q4.yml)
+- [pandemics_norm_num_q5.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q5.yml)
+- [pandemics_norm_num_q6.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q6.yml)
+- [pandemics_norm_num_q7.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q7.yml)
+- [pandemics_norm_num_q8.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q8.yml)
+
+
 ## Defoe Job submission queries
 
 They are avaible inside [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm)
