@@ -33,7 +33,7 @@ NUMCORES=$( expr 32 '*' "$NUMWORKERS")
 echo "Number of cores fpr this query is" $NUMCORES
 cd $HOME/defoe
 
-#### 1. FREQUENCY QUERIES
+#### 1. FREQUENCY QUERIES FOR 4 STUDIES
 
 
 ##### Janell queries: DSM study - using different preprocessing treatments and lexicons
@@ -52,14 +52,13 @@ $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py tda_total.txt papers defoe.papers.queries.target_keysearch_by_year queries/music_excluding_norm.yml -r results_music_types_excluding_music -n $NUMCORES > log_music_excluding
 
-##### Eddie queries: Science study - using different preprocessing treatments
+##### Edward queries: Science study - using different preprocessing treatments
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py tda_total.txt papers defoe.papers.queries.target_keysearch_by_year queries/science_norm.yml -r results_science_norm -n $NUMCORES > log_science_norm
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py tda_total.txt papers defoe.papers.queries.target_keysearch_by_year queries/science_lema.yml -r results_science_lema -n $NUMCORES > log_science_lema
 
 ###### Galina queries: Pandemics study - using different lexicon treatments
-
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py tda_1918_2010.txt papers defoe.papers.queries.target_keysearch_by_year_filter_date queries/pandemics_norm_num_q1.yml -r results_pandemics_norm_num_q1 -n $NUMCORES > log_pandemics_q1
 
@@ -78,8 +77,7 @@ $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py tda_1918_2010.txt papers defoe.papers.queries.target_keysearch_by_year_filter_date queries/pandemics_norm_num_q8.yml -r results_pandemics_norm_num_q8 -n $NUMCORES > log_pandemics_q8
 
 
-
-#### 2. DETAILS QUERIES (text of the selected/filtered articles)
+#### 2. DETAILS QUERIES (text of the selected/filtered articles) FOR 4 STUDIES
 
 ##### Janell queries - DMS study : using lemmatize preprocessing treatment and different lexicons
 
@@ -95,12 +93,14 @@ $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py tda_total.txt papers defoe.papers.queries.target_keysearch_by_year_details queries/music_excluding_norm.yml -r results_music_types_excluding_music_details -n $NUMCORES > log_music_excluding
 
-##### Eddie queries - Science study: using different preprocessing treatments
+
+##### Edward queries - Science study: using different preprocessing treatments
 
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py tda_total.txt papers defoe.papers.queries.target_keysearch_by_year_details queries/science_norm.yml -r results_science_norm_details -n $NUMCORES > log_science_norm
 
 $SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py tda_total.txt papers defoe.papers.queries.target_keysearch_by_year_details queries/science_lema.yml -r results_science_lema_details -n $NUMCORES > log_science_lema
+
 
 ###### Galina queries - Pandemics study: using different lexicons
 
