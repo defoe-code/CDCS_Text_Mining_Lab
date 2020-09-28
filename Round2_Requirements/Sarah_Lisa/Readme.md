@@ -27,7 +27,7 @@ Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/
 
 - [Frequency query with target words group results by page](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/keysearch_by_year_page_count.py)
 - [Frequency query with target words group results by term](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/keysearch_by_year_term_count.py)
-- [Selected pages text query along with articles' metadata](hhttps://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/window_keysearch_concordance_by_date.py)
+- [Selected pages text query along with articles' metadata](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/window_keysearch_concordance_by_date.py)
 
 ## Defoe queries configuration files
 
