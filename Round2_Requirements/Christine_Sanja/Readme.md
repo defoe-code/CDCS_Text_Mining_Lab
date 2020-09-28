@@ -35,6 +35,10 @@ Times Digital Archive (TDA)
 - [Selected articles text query along with articles' metadata](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year_details.py)
 - [Selected articles preprocessed text query along with articles' metadata](https://github.com/defoe-code/defoe/blob/master/defoe/papers/queries/target_keysearch_by_year_preprocessed_details.py)
 
+## Defoe queries configuration files
+
+- [peace_war.yml](https://github.com/defoe-code/defoe/blob/master/queries/peace_war.yml)
+
 ## Defoe Job submission queries
 
 They are avaible inside [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm)
