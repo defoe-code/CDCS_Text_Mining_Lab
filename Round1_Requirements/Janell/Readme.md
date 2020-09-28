@@ -21,6 +21,18 @@ The project will benefit as well from creating a new sentiment analyses query to
 
 Available [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1_Requirements/Janell/Query_Inputs.md).
 
+## Dataset used
+
+Times Digital Archive (TDA)
+
+# Defoe model 
+
+[Papers](https://github.com/defoe-code/defoe/tree/master/defoe/papers)
+
+# Defoe queries
+
+They are avaible inside [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm)
+
 ## Results
 
 **Frequency Results** using different lexicons (*explict*, *neutral*, *implicit*) can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_1/Janell_Kwork). 
