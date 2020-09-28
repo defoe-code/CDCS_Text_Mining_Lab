@@ -27,7 +27,6 @@ cd $HOME/bash_scripts
 rm -f master.log
 rm -f driver.log
 rm -f worker.log
-rm -f slaves.log
 rm -f nodes_list.log
 
 echo "HOSTNAME is" $HOSTNAME
