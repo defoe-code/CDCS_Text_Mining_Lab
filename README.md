@@ -141,9 +141,16 @@ def longsfix_sentence(sentence, defoe_path, os_type)
 
 This function needs to two user's parameters (apart from the sentence/word to inspect). The operating system - *os_type* -(either linux or mac), along with the path of their defoe installation - *defoe_path*. The reason is that function (LINE 263) calls to a set of different scripts depending on the user's operationg system.
 
-Both parameteres are usually spicified in the configuration file ([example](https://github.com/defoe-code/defoe/blob/master/queries/music_including_norm.yml)) used to configure any query's parameters (e.g. preprocess treatment, lexicon file, etc). 
+Both parameteres are usually spicified in a configuration file ([example](https://github.com/defoe-code/defoe/blob/master/queries/music_including_norm.yml)) used to configure any query's parameters (e.g. preprocess treatment, lexicon file, etc).
 
-The long-S fix can be tested as a single script (called long_s.py). This script is available [here](https://github.com/defoe-code/defoe/tree/master/defoe/long_s_fix). For running it you just need to do the following (after changing the defoe_path and os_type variables according to your needs).
+```
+preprocess: normalize
+data: music.txt
+defoe_path: /lustre/home/sc048/rosaf4/defoe/
+os_type: linux
+```
+
+The long-S fix can be tested as a single script called [long_s.py](https://github.com/defoe-code/defoe/tree/master/defoe/long_s_fix). For running it you just need to do the following (after changing the **defoe_path** and **os_type variables** according to your needs - just in this case, those variables are specified in the python script).
 
 ```
 cd $HOME/defoe/defoe/long_s_fix/
@@ -213,6 +220,8 @@ At **page level** we also run the frequency query using the same lexicon.
 
 - [slavery.yml](https://github.com/defoe-code/defoe/blob/master/queries/slavery.yml)
 
+This configuration file might need to be modified according to your set up and needs.
+
 ### Slurm job
 
 The SLURM job to run this study can be found [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm). 
@@ -240,11 +249,11 @@ These two queries are also avaible under ES model:
  - [Applying the original geoparser to the data pre-stored in ES](https://github.com/defoe-code/defoe/blob/master/defoe/es/queries/geoparser_pages.py)
  - [Applying spacy and the georesolve to the data pre-stored in ES](https://github.com/defoe-code/defoe/blob/master/defoe/es/queries/georesolution_pages.py)
  
- **Note**: For using the queries under ES model, that would require to write the data first to ES using [this query](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/write_pages_df_es.py) and a configuration file like [this](https://github.com/defoe-code/defoe/blob/master/queries/write_es.yml) one.
+ **Note**: For using the queries under ES model, that would require to write the data first to ES using [this query](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/write_pages_df_es.py) and a configuration file like [this](https://github.com/defoe-code/defoe/blob/master/queries/es_properties_edina_gaz.yml) one (which it might need to be modified according to your set up and needs).
  
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
 
-Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. Therefore, we have **four configuration files**, since the Scottish Gazetteer and Encyclopaedia Britannica uses **different gazetteers** and **bounding box** configurations:
+Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. Therefore, we have **four configuration files**, since the Scottish Gazetteer and Encyclopaedia Britannica uses **different gazetteers** and **bounding box** configurations (which they might need to be modified according to your set up and needs):
 - [Scottish Gazetteer + Original Geoparser](https://github.com/defoe-code/defoe/blob/master/queries/geoparser_sg.yml)
 - [Encyclopaedia Britannica + Original Geoparser](https://github.com/defoe-code/defoe/blob/master/queries/geoparser_eb.yml)
 - [Scottish Gazetteer + Spacy + Georesolve](https://github.com/defoe-code/defoe/blob/master/queries/georesolve_sg.yml)
