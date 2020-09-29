@@ -232,13 +232,19 @@ This work is being conducted in collaboration with the [Language Technology Grou
 
 For running the **defoe geoparsing queries we have not used Cirrus**, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, **we have used a VM** for this. **Instructions of how we have set up this VM** with defoe, the Edinburgh geoparser and Spark can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md), along with examples of how to run defoe geoparser queries using different configurations.
 
-We have **two defoe geoparser queries**:
+We have **two defoe geoparser queries** under NLS model:
  - [Applying the original geoparser](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/geoparser_pages.py)
  - [Applying spacy and the georesolve](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/georesolution_pages.py)
  
+These two queries are also avaible under ES model: 
+ - [Applying the original geoparser to the data pre-stored in ES](https://github.com/defoe-code/defoe/blob/master/defoe/es/queries/geoparser_pages.py)
+ - [Applying spacy and the georesolve to the data pre-stored in ES](https://github.com/defoe-code/defoe/blob/master/defoe/es/queries/georesolution_pages.py)
+ 
+ **Note**: For using the queries under ES model, that would require to write the data first to ES using [this query](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/write_pages_df_es.py) and a configuration file like [this](https://github.com/defoe-code/defoe/blob/master/queries/write_es.yml) one.
+ 
 **A paper describing this work** can be found [here](https://www.research.ed.ac.uk/portal/files/141855140/Geoparsing_the_historical_Gazetteers_FILGUEIRA_DOA12032020_AFV.pdf), and the **notebooks presented in this paper** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Scottish_Gazetteer/Visualization_Methods/GroupByPlaceName/With_BB). 
 
-Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. Therefore, we have **four configuration files**:
+Recently, we have also extended this work to geoparse automatically the Encyclopaedia Britannica. Therefore, we have **four configuration files**, since the Scottish Gazetteer and Encyclopaedia Britannica uses **different gazetteers** and **bounding box** configurations:
 - [Scottish Gazetteer + Original Geoparser](https://github.com/defoe-code/defoe/blob/master/queries/geoparser_sg.yml)
 - [Encyclopaedia Britannica + Original Geoparser](https://github.com/defoe-code/defoe/blob/master/queries/geoparser_eb.yml)
 - [Scottish Gazetteer + Spacy + Georesolve](https://github.com/defoe-code/defoe/blob/master/queries/georesolve_sg.yml)
