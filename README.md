@@ -132,16 +132,15 @@ Also, you need to modify Round[1|2].slurm files according to your needs - e.g ti
 
 # 6. Long-S fix
 
-Many historical documents used a [long-S that OCR tends to confuse as f](https://en.wikipedia.org/wiki/Long_s). For fixing this kind of OCR errors we apply in most of our defoe queries the [longsfix_sentence function](https://github.com/defoe-code/defoe/blob/master/defoe/query_utils.py) before applying any other preprocessing treatment to the text's words. 
+Many historical documents used a [long-S that OCR tends to confuse as f](https://en.wikipedia.org/wiki/Long_s). For fixing this kind of OCR errors we apply in most of our defoe queries the [longsfix_sentence function](https://github.com/defoe-code/defoe/blob/master/defoe/query_utils.py) before applying any other preprocessing treatment to the text's words. This function calls automatically to a set of scripts produced for the [Edinburgh Geoparser](https://programminghistorian.org/en/lessons/geoparsing-text-with-edinburgh#patch-fix)
 
 ```
 def longsfix_sentence(sentence, defoe_path, os_type)
 
 ```
+As we can se above *longsfix_sentence* function needs to two user's parameters (apart from the sentence/word to inspect). The user's operating system - *os_type* -(either linux or mac), along with the path of user's defoe installation path- *defoe_path*. The reason is that function (LINE 263) calls to a set of different scripts depending on the user's operationg system in which defoe queries are been run.
 
-This function needs to two user's parameters (apart from the sentence/word to inspect). The operating system - *os_type* -(either linux or mac), along with the path of their defoe installation - *defoe_path*. The reason is that function (LINE 263) calls to a set of different scripts depending on the user's operationg system.
-
-Both parameteres are usually spicified in a configuration file ([example](https://github.com/defoe-code/defoe/blob/master/queries/music_including_norm.yml)) used to configure any query's parameters (e.g. preprocess treatment, lexicon file, etc).
+Both parameteres are usually spicified in a configuration file ([example](https://github.com/defoe-code/defoe/blob/master/queries/music_including_norm.yml)), like this one bellow: 
 
 ```
 preprocess: normalize
@@ -239,7 +238,7 @@ Furthermore, we have continued our work on devising automatic and parallel metho
 
 This work is being conducted in collaboration with the [Language Technology Group at Informatics](https://www.ltg.ed.ac.uk/projects/geoparsing-scottish-gazetteers/). 
 
-For running the **defoe geoparsing queries we have not used Cirrus**, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, **we have used a VM** for this. **Instructions of how we have set up this VM** with defoe, the Edinburgh geoparser and Spark can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md), along with [examples](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md#running-original-geoparser-defoe-query) of how to run defoe geoparser queries using different configurations.
+For running the **defoe geoparsing queries we have not used Cirrus**, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, **we have used a VM** for this. **Instructions of how we have set up this VM** with **defoe, the Edinburgh geoparser and Spark** can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md), along with [examples](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md#running-original-geoparser-defoe-query) of how to run defoe geoparser queries using different configurations.
 
 We have **two defoe geoparser queries** under NLS model:
  - [Applying the original geoparser](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/geoparser_pages.py)
@@ -258,6 +257,10 @@ Recently, we have also extended this work to geoparse automatically the Encyclop
 - [Encyclopaedia Britannica + Original Geoparser](https://github.com/defoe-code/defoe/blob/master/queries/geoparser_eb.yml)
 - [Scottish Gazetteer + Spacy + Georesolve](https://github.com/defoe-code/defoe/blob/master/queries/georesolve_sg.yml)
 - [Encyclopaedia Britannica + Spacy + Georesolve](https://github.com/defoe-code/defoe/blob/master/queries/georesolve_eb.yml)
+
+Notice that the geoparser also calls to a **different set of script, depending on the user's operative systems**. Therefore, all configuration files used to run those queries need to specify the *os_type* and *defoe_path* parameteres. 
+
+For more details about the [Edinburgh Geoparser](http://groups.inf.ed.ac.uk/geoparser/documentation/v1.1/html/) you can follow the tutorial specified in the link.
 
 
 # Extracting automatically articles from the Encyclopaedia Britannica (EB)
