@@ -239,7 +239,7 @@ Furthermore, we have continued our work on devising automatic and parallel metho
 
 This work is being conducted in collaboration with the [Language Technology Group at Informatics](https://www.ltg.ed.ac.uk/projects/geoparsing-scottish-gazetteers/). 
 
-For running the **defoe geoparsing queries we have not used Cirrus**, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, **we have used a VM** for this. **Instructions of how we have set up this VM** with defoe, the Edinburgh geoparser and Spark can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md), along with examples of how to run defoe geoparser queries using different configurations.
+For running the **defoe geoparsing queries we have not used Cirrus**, since it requires that the computing nodes have connection to internet to georesolve locations. Therefore, **we have used a VM** for this. **Instructions of how we have set up this VM** with defoe, the Edinburgh geoparser and Spark can be foud [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md), along with [examples](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md#running-original-geoparser-defoe-query) of how to run defoe geoparser queries using different configurations.
 
 We have **two defoe geoparser queries** under NLS model:
  - [Applying the original geoparser](https://github.com/defoe-code/defoe/blob/master/defoe/nls/queries/geoparser_pages.py)
