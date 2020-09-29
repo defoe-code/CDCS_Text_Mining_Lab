@@ -249,7 +249,10 @@ Recently, we have also extended this work to geoparse automatically the Encyclop
 
 Finally, we have created a [new defoe query for extracting automatically articles](https://github.com/defoe-code/defoe/blob/master/defoe/nlsArticles/queries/write_articles_pages_df_hdfs.py) from the EB. The articles are stored per edition (and also we have them in a single file), in CSV files. 
 
-Note that for running this query, apart from Spark you need to have **HADOOP installeld** in your computing enviroment. Instructions for installing it in Cirrus can be found [here](https://github.com/EPCCed/prace-spark-for-data-scientists/tree/master/Hadoop) and for installing it in a VM can be found [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md#installing-haddop-optional). (Note, I used a VM for running this query). 
+Note that for running this query, apart from Spark you need to have **HADOOP installeld** in your computing enviroment. Instructions for installing it in Cirrus can be found [here](https://github.com/EPCCed/prace-spark-for-data-scientists/tree/master/Hadoop) and for installing it in a VM can be found [here](https://github.com/defoe-code/defoe/blob/master/docs/setup-VM.md#installing-haddop-optional). (Note, I used a VM for running this query).
+
+Furthermore, this query also need a configuration file for specifying the operating system and the defoe path for the *long_s fix*:
+- [configuration_file](https://github.com/defoe-code/defoe/blob/master/queries/writehdfs.yml)
 
 ### Articles metadata
 
