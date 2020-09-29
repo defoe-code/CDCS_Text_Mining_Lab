@@ -69,23 +69,23 @@ done
 
 #### Detecting automatically the EB articles; preprocessing them ; and storing them as HDFS files.
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_first_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_first_edition -n $NUMCORES > log_first_edition.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_first_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs queries/writehdfs.yml -r results_first_edition -n $NUMCORES > log_first_edition.txt 
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_second_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_second_edition -n $NUMCORES > log_second_edition.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_second_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs queries/writehdfs.yml -r results_second_edition -n $NUMCORES > log_second_edition.txt 
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_thrid_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_third_edition -n $NUMCORES > log_third_edition.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_thrid_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs queries/writehdfs.yml -r results_third_edition -n $NUMCORES > log_third_edition.txt 
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_fourth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_fourth_edition -n $NUMCORES > log_fourth_edition.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_fourth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs queries/writehdfs.yml -r results_fourth_edition -n $NUMCORES > log_fourth_edition.txt 
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_fifth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_fifth_edition -n $NUMCORES > log_fifth_edition.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_fifth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs queries/writehdfs.yml -r results_fifth_edition -n $NUMCORES > log_fifth_edition.txt 
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_sixth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_sixth_edition -n $NUMCORES > log_sixth_edition.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_sixth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs queries/writehdfs.yml -r results_sixth_edition -n $NUMCORES > log_sixth_edition.txt 
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_seventh_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_seventh_edition -n $NUMCORES > log_seventh_edition.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_seventh_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs queries/writehdfs.yml -r results_seventh_edition -n $NUMCORES > log_seventh_edition.txt 
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_eighth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_eighth_edition -n $NUMCORES > log_eighth_edition.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_eighth_edition.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs queries/writehdfs.yml -r results_eighth_edition -n $NUMCORES > log_eighth_edition.txt 
 
-$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_suplements.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs -r results_suplements_edition -n $NUMCORES > log_suplements_edition.txt 
+$SPARK_HOME/bin/spark-submit --master spark://$hostmaster:7077 --executor-memory 60g --py-files defoe.zip defoe/run_query.py nls_suplements.txt  nlsArticles defoe.nlsArticles.queries.write_articles_pages_df_hdfs queries/writehdfs.yml -r results_suplements_edition -n $NUMCORES > log_suplements_edition.txt 
 
 
 #### Running the keysearch_articles_by_year_details QUERY against the HDFS files previously calculated
