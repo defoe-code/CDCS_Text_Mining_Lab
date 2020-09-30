@@ -132,7 +132,7 @@ Also, you need to modify Round[1|2].slurm files according to your needs - e.g ti
 
 # 6. Long-S fix
 
-Many historical documents used a [long-S that OCR tends to confuse as f](https://en.wikipedia.org/wiki/Long_s). For fixing this kind of OCR errors we apply in most of our defoe queries the [longsfix_sentence function](https://github.com/defoe-code/defoe/blob/master/defoe/query_utils.py) before applying any other preprocessing treatment to the text's words. This function calls automatically to a set of scripts produced for the [Edinburgh Geoparser](https://programminghistorian.org/en/lessons/geoparsing-text-with-edinburgh#patch-fix)
+Many historical documents used a [long-S that OCR tends to confuse as f](https://en.wikipedia.org/wiki/Long_s). For fixing this kind of OCR errors we apply in most of our defoe queries the [longsfix_sentence function](https://github.com/defoe-code/defoe/blob/master/defoe/query_utils.py) before applying any other preprocessing treatment to the text's words. This function calls automatically to a set of scripts produced for the [Edinburgh Geoparser](https://programminghistorian.org/en/lessons/geoparsing-text-with-edinburgh#patch-fix) to fix the long-S errors. 
 
 ```
 def longsfix_sentence(sentence, defoe_path, os_type)
