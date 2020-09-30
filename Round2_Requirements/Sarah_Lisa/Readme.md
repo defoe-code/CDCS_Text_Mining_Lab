@@ -13,7 +13,7 @@ Since the 16th century, Scots has been increasingly influenced by English, and p
 
 ## Quer(ies) Parameters
 
-Available [here](./Round2_Requirements/Sarah_Lisa/Query_Inputs.md).
+Available [here](./Query_Inputs.md).
 
 ## Dataset used
 
@@ -40,7 +40,7 @@ Available [here](./Round2_Requirements/Sarah_Lisa/Query_Inputs.md).
 
 ## Defoe Job submission queries
 
-They are avaible inside [Round2.slurm](./Round2.slurm)
+They are avaible inside [Round2.slurm](../../Round2.slurm)
 
 ## Results
 **Frequency results** can be visualized [here](https://github.com/defoe-code/defoe_visualization/tree/master/Round_2/Lisa_Sarah).

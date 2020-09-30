@@ -19,7 +19,7 @@ The project will benefit as well from creating a new sentiment analyses query to
 
 ## Quer(ies) Parameters
 
-Available [here](./Round1_Requirements/Janell/Query_Inputs.md).
+Available [here](./Query_Inputs.md).
 
 ## Dataset used
 
@@ -43,7 +43,7 @@ Times Digital Archive (TDA)
 
 ## Defoe Job submission queries
 
-They are avaible inside [Round1.slurm](./Round1.slurm)
+They are avaible inside [Round1.slurm](../../Round1.slurm)
 
 ## Results
 
