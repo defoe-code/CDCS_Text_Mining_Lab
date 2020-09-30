@@ -20,10 +20,10 @@ As follows, we have a summary of the **instructions needed to replicate this wor
 
 In your $HOME you need to have the following:
 * spark-2.4.0-bin-hadoop2.7 
-* [bash_scripts](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/bash_scripts)
-* Slurm-jobs for provisioning the Spark cluster: [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/sparkcluster_driverslurm)
-* Slurm-jobs for launching defoe queries to the Spark cluster: [Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm), [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm), [trade_legacy_slavery.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm)
-* Script for stopping Spark cluster (** not needed anymore**): [spark_stop.sh](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/spark_stop.sh)
+* [bash_scripts](./bash_scripts)
+* Slurm-jobs for provisioning the Spark cluster: [sparkcluster_driver.slurm](./sparkcluster_driverslurm)
+* Slurm-jobs for launching defoe queries to the Spark cluster: [Round1.slurm](./Round1.slurm), [Round2.slurm](./Round2.slurm), [trade_legacy_slavery.slurm](./trade_legacy_slavery.slurm)
+* Script for stopping Spark cluster (** not needed anymore**): [spark_stop.sh](./spark_stop.sh)
 
 # 2. Creating a conda python3 enviroment in Cirrus
 
@@ -70,7 +70,7 @@ sbatch sparkcluster_driver.slurm
 
 You will need to **wait until the job is running before proceding to run defoe queries**.  
 
-You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/sparkcluster_driver.slurm) according to your need. For example, for chaning the amount of time, number of nodes, and account. The current script configures a **Spark cluster of 324 cores** (9 nodes *X* 36 cores per node). 
+You can modify [sparkcluster_driver.slurm](./sparkcluster_driver.slurm) according to your need. For example, for chaning the amount of time, number of nodes, and account. The current script configures a **Spark cluster of 324 cores** (9 nodes *X* 36 cores per node). 
 
 ```
 #SBATCH --job-name=SPARKCLUSTER
@@ -86,23 +86,23 @@ You can modify [sparkcluster_driver.slurm](https://github.com/defoe-code/CDCS_Te
 
 # 5. Submitting defoe queries for Round 1 and Round 2
 
-During this summer, we conducted a serie of studies within the [CDCS text-mining lab](https://www.cdcs.ed.ac.uk/cdcs-text-mining-lab-call-projects?utm_campaign=2619665_CDCS%20Digest%20W%2FC%2016%20March%202020&utm_medium=email&utm_source=College%20of%20Arts%2C%20Humanities%20%26%20Social%20Sciences%2C%20The%20University%20of%20Edinburgh&dm_t=0,0,0,0,0), in which we worked with humanities and social science researchers who can ask complex questions of large-scale data sets. We selected four research projects for [Round 1](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements), and two for [Round 2](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements). 
+During this summer, we conducted a serie of studies within the [CDCS text-mining lab](https://www.cdcs.ed.ac.uk/cdcs-text-mining-lab-call-projects?utm_campaign=2619665_CDCS%20Digest%20W%2FC%2016%20March%202020&utm_medium=email&utm_source=College%20of%20Arts%2C%20Humanities%20%26%20Social%20Sciences%2C%20The%20University%20of%20Edinburgh&dm_t=0,0,0,0,0), in which we worked with humanities and social science researchers who can ask complex questions of large-scale data sets. We selected four research projects for [Round 1](./Round1_Requirements), and two for [Round 2](./Round2_Requirements). 
 
 A description of each research project/study can be found as follows:
 
 **Round 1**:
-   - [Jannel Kwork](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Janell): DSM study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
-   - [Dave O'Brien](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Dave): Music study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
-   - [Edward Martin](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Edward): Science study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
-   - [Galina Andreeva](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round1_Requirements/Galina): Pandemics study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
+   - [Jannel Kwork](./Round1_Requirements/Janell): DSM study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
+   - [Dave O'Brien](./Round1_Requirements/Dave): Music study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
+   - [Edward Martin](./Round1_Requirements/Edward): Science study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
+   - [Galina Andreeva](./Round1_Requirements/Galina): Pandemics study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
    
  **Round 2**:
-   - [Christine Bell and Sanja Badanjak](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Christine_Sanja): Peace/War study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
-   - [Sarah Van eydhoven and Lisa Gotthard](https://github.com/defoe-code/CDCS_Text_Mining_Lab/tree/master/Round2_Requirements/Sarah_Lisa): Scots vs English - [NLS chapbooks](https://data.nls.uk/data/digitised-collections/chapbooks-printed-in-scotland/)
+   - [Christine Bell and Sanja Badanjak](./Round2_Requirements/Christine_Sanja): Peace/War study - [TDA newspapers](https://www.gale.com/intl/c/the-times-digital-archive)
+   - [Sarah Van eydhoven and Lisa Gotthard](./Round2_Requirements/Sarah_Lisa): Scots vs English - [NLS chapbooks](https://data.nls.uk/data/digitised-collections/chapbooks-printed-in-scotland/)
    
-Each reserch project/study has a serie of defoe queries. In most of them, we first submitted a *frequency query* modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another *query for getting the details (text)* of the desired/filtered articles/pages. The **requirements** were collected using this [document](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2_Requirements/Readme.md) as a **baseline for formulating defoe queries**.
+Each reserch project/study has a serie of defoe queries. In most of them, we first submitted a *frequency query* modifying different parameters (e.g. article count vs term count, date, lexicon, target words, preprocessing treatment), and then we submitted another *query for getting the details (text)* of the desired/filtered articles/pages. The **requirements** were collected using this [document](./Round2_Requirements/Readme.md) as a **baseline for formulating defoe queries**.
 
-Later we created **two slurm jobs**, one per Round ([Round1.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round1.slurm) and [Round2.slurm](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/Round2.slurm)), for running all defoe queries in Cirrus. You can comment the studies that do not want to run. For running all the studies (with all defoe queries) included in **Round 1**, type the following command: 
+Later we created **two slurm jobs**, one per Round ([Round1.slurm](./Round1.slurm) and [Round2.slurm](./Round2.slurm)), for running all defoe queries in Cirrus. You can comment the studies that do not want to run. For running all the studies (with all defoe queries) included in **Round 1**, type the following command: 
 
   ```
  sbatch Round1.slurm
@@ -205,7 +205,7 @@ Furthermore, we have also created several **notebooks for visualizing frequency 
 We also started an investigation on the slave trade and how it permeates the different volumes of the [Encyclopaedia Brittanica](https://data.nls.uk/data/digitised-collections/encyclopaedia-britannica/) (EB). We have a lexicon, [slavery_trade.txt](https://github.com/defoe-code/defoe/blob/master/queries/slavery_trade.txt), that we looked up at two levels:
 
 - **Page level**: returning a snippet (40 words before and after each term) every time a term from the lexicon is found *in a page*.
-- **Article level**: returning an article every time a term from the lexicon is foun *in an article*. For doing this, **we need first to extract all the articles per EB page**, and store them in CSV files (one per edition). See more information about extracting articles [bellow](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/README.md#extracting-automatically-articles-from-the-encyclopaedia-britannica-eb). Once extracted the articles per page, then we can use anohter defoe to filter those by the lexicon.  
+- **Article level**: returning an article every time a term from the lexicon is foun *in an article*. For doing this, **we need first to extract all the articles per EB page**, and store them in CSV files (one per edition). See more information about extracting articles [bellow](./README.md#extracting-automatically-articles-from-the-encyclopaedia-britannica-eb). Once extracted the articles per page, then we can use anohter defoe to filter those by the lexicon.  
 
 At **page level** we also run the frequency query using the same lexicon. 
 
@@ -223,7 +223,7 @@ This configuration file might need to be modified according to your set up and n
 
 ### Slurm job
 
-The SLURM job to run this study can be found [here](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm). 
+The SLURM job to run this study can be found [here](./trade_legacy_slavery.slurm). 
  
  ### Preliminary Results 
  
@@ -326,5 +326,5 @@ Those files (one per edition, and also one with all articles) can be downloaded 
   ```
 ### Slurm job
 
-In this [SLURM](https://github.com/defoe-code/CDCS_Text_Mining_Lab/blob/master/trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files. 
+In this [SLURM](./trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files. 
 
