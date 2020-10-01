@@ -39,6 +39,10 @@ Times Digital Archive (TDA)
 
 - [peace_war.yml](https://github.com/defoe-code/defoe/blob/master/queries/peace_war.yml)
 
+## Defoe data files
+
+- [tda_total.txt](https://github.com/defoe-code/defoe/blob/master/others/tda_total.txt)
+
 ## Defoe Job submission queries
 
 They are avaible inside [Round2.slurm](../../Round2.slurm)

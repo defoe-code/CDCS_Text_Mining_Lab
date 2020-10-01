@@ -33,6 +33,10 @@ Times Digital Archive (TDA)
 - [science_lema.yml](https://github.com/defoe-code/defoe/tree/master/queries/science_lema.yml)
 - [science_norm.yml](https://github.com/defoe-code/defoe/tree/master/queries/science_norm.yml)
 
+## Defoe data files
+
+- [tda_total.txt](https://github.com/defoe-code/defoe/blob/master/others/tda_total.txt)
+
 ## Defoe Job submission queries
 
 They are avaible inside [Round1.slurm](../../Round1.slurm)

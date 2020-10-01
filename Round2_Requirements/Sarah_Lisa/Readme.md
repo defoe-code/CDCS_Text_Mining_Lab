@@ -38,6 +38,10 @@ Available [here](./Query_Inputs.md).
 - [scots.yml](https://github.com/defoe-code/defoe/blob/master/queries/scots.yml)
 - [english.yml](https://github.com/defoe-code/defoe/blob/master/queries/english.yml)
 
+## Defoe data files
+
+- [chapbooks_data.txt](https://github.com/defoe-code/defoe/blob/master/others/chapbooks_data.txt)
+
 ## Defoe Job submission queries
 
 They are avaible inside [Round2.slurm](../../Round2.slurm)

@@ -41,6 +41,9 @@ Times Digital Archive (TDA)
 - [pandemics_norm_num_q7.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q7.yml)
 - [pandemics_norm_num_q8.yml](https://github.com/defoe-code/defoe/blob/master/queries/pandemics_norm_num_q8.yml)
 
+## Defoe data files
+
+- [tda_1918_2010.txt](https://github.com/defoe-code/defoe/blob/master/others/tda_1918_2010.txt)
 
 ## Defoe Job submission queries
 

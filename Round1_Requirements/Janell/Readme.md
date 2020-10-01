@@ -40,6 +40,9 @@ Times Digital Archive (TDA)
 - [dsm_implicit_lema.yml](https://github.com/defoe-code/defoe/blob/master/queries/dsm_implicit_lema.yml)
 - [dsm_neutral_lema.yml](https://github.com/defoe-code/defoe/blob/master/queries/dsm_neutral_lema.yml)
 
+## Defoe data files
+
+- [tda_1950_2009.txt](https://github.com/defoe-code/defoe/blob/master/others/tda_1950_2009.txt)
 
 ## Defoe Job submission queries
 

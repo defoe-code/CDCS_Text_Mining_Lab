@@ -37,6 +37,10 @@ Times Digital Archive (TDA)
 - [music_including_norm.yml](https://github.com/defoe-code/defoe/tree/master/queries/music_including_norm.yml)
 - [music_norm.yml](https://github.com/defoe-code/defoe/tree/master/queries/music_norm.yml)
 
+## Defoe data files
+
+- [tda_total.txt](https://github.com/defoe-code/defoe/blob/master/others/tda_total.txt)
+
 ## Defoe Job submission queries
 
 They are avaible inside [Round1.slurm](../../Round1.slurm)
