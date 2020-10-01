@@ -224,6 +224,10 @@ This configuration file might need to be modified according to your set up and n
 ### Slurm job
 
 The SLURM job to run this study can be found [here](./trade_legacy_slavery.slurm). 
+
+### Data files
+
+The data files used in the above slurm job can be found [here](https://github.com/defoe-code/defoe/tree/master/others), as nls_[first|second|etc].txt.
  
  ### Preliminary Results 
  
@@ -328,3 +332,6 @@ Those files (one per edition, and also one with all articles) can be downloaded 
 
 In this [SLURM](./trade_legacy_slavery.slurm) job (in the second part of file - *At Article level*), you can find the **defoe queries necessaries for extracting the articles per edition** and storing them in HDFS files. 
 
+### Data Files
+
+The data files used in the above slurm job can be found [here](https://github.com/defoe-code/defoe/tree/master/others), as nls_[first|second|etc].txt.
