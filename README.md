@@ -138,7 +138,7 @@ Many historical documents used a [long-S that OCR tends to confuse as f](https:/
 def longsfix_sentence(sentence, defoe_path, os_type)
 
 ```
-As we can see above *longsfix_sentence* function needs to two user's parameters (apart from the sentence/word to inspect). The user's operating system - *os_type* -(either linux or mac), along with the path of user's defoe installation path- *defoe_path*. The reason is that function (LINE 263) calls to a set of different scripts depending on the user's operationg system in which defoe queries are been run.
+As we can see above *longsfix_sentence* function needs to two user's parameters (apart from the sentence/word to inspect). The user's operating system - *os_type* -(either linux or mac), along with the path of user's defoe installation path- *defoe_path*. The longsfix_sentence function (LINE 263) calls to a set of different scripts depending on the user's operationg system .
 
 Both parameteres are usually spicified in a configuration file ([example](https://github.com/defoe-code/defoe/blob/master/queries/music_including_norm.yml)), like this one bellow: 
 
